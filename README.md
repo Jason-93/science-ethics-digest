@@ -1,6 +1,12 @@
 # 科学伦理观察（Science Ethics Digest）
 
+**在线地址：** https://jason-93.github.io/science-ethics-digest/
+
 聚焦科学与 AI 交叉地带伦理事件的追踪网站：智能体安全、人兽嵌合研究、研究诚信与前沿 AI 治理。每一期报道包含**事件描述**、**事件时间线**（如适用）、**伦理分析**与**完整来源链接**。
+
+## 部署
+
+推送到 `main` 分支后，GitHub Actions 工作流（[.github/workflows/deploy.yml](.github/workflows/deploy.yml)）会自动构建并部署到 GitHub Pages。站点以 `/science-ethics-digest/` 为 base 路径构建（见 `vite.config.ts`），并使用 `public/404.html` 处理 SPA 路由回退。
 
 ## 技术栈
 
@@ -31,7 +37,8 @@ npm run preview    # 预览生产构建
 ## 定时更新
 
 本站由定时任务驱动：任务每次运行时检索最新的科学伦理与 AI 安全事件，撰写新报道追加到
-`src/data/articles.ts`，更新 `siteInfo.updatedAt` 与期号，然后提交到本仓库。
+`src/data/articles.ts`，更新 `siteInfo.updatedAt` 与期号，然后提交并**推送到 GitHub**；
+推送触发上面的部署工作流，网站自动更新。
 
 ## 首期内容（2026-09-26）
 
