@@ -30,7 +30,7 @@
         var path = window.location.pathname;
         var route = path.startsWith(base) ? path.slice(base.length) : path;
         if (!route || route === '/') route = '/';
-        sessionStorage.setItem('gh-spa-redirect', route + window.location.search + window.location.hash);
+        sessionStorage.setItem('gh-spa-redirect', base + route + window.location.search + window.location.hash);
         window.location.replace(base + '/');
       })();
     </script>
