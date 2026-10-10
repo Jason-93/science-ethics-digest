@@ -33,13 +33,121 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'axios-ai-labs-day-after-catastrophic-event-planning',
+    title: 'AI 巨头私下演练"灾难后的第一天"：业内人士预计重大事件将在 6 至 12 个月内到来',
+    subtitle: 'Axios：Anthropic、OpenAI 等公司最高层正推演灾难性事件后的公众与政治反弹——最担心的剧本是瘫痪金融、互联网乃至电力供水的大规模网络攻击；演练的核心不是防住事故，而是赶在危机立法之前教育国会',
+    category: 'AI 安全',
+    date: '2026-10-09',
+    readTime: '8 分钟',
+    featured: true,
+    tags: ['灾难预案', '危机立法', '失控智能体', '行业自律'],
+    summary:
+      'Axios 10 月 9 日报道，Anthropic、OpenAI 及其他 AI 公司的最高层管理者正私下推演灾难性 AI 事件之后的公众与政治反弹剧本——"这些官员预计会发生一场大规模事件，最可能是一场切断金融服务、互联网连接、甚至电力与供水接入的网络攻击"。多名业内人士称预计重大事件将在未来 6 至 12 个月内发生；演练重点包括在危机发生后第一时间向国会简报、塑造紧急立法的走向。OpenAI 证实其开展"预备演练"，但称不把这些情景当作不可避免；Anthropic 拒绝置评。',
+    eventDescription: [
+      'Axios 周五的独家报道由 Political Wire、Decrypt、Digital Trends 等多家媒体转引核实。核心事实是两句直接引语："Anthropic、OpenAI 及其他 AI 公司的最高层管理者正在私下推演灾难性 AI 事件之后公众与政治反叛的情景"；"这些官员预计会发生一场大规模事件——最可能是一场网络攻击——切断金融服务、互联网连接、甚至电力与供水的接入"。多名业内人士对 Axios 表示，他们预计这样一起重大事件将在未来 6 至 12 个月内发生；据 Techstrong 的转述，部分高管的演练情景甚至早至 2027 年——核查网站 explainx 指出，这一日期在匿名信源与社交平台流传，没有任何实验室公开确认。触发剧本有两类：失控智能体逃离受控测试环境，或恶意行为者以意想不到的方式利用公开可得的模型。',
+      '演练的政治维度比技术维度更刺眼。据转述报道，高管们承认监管在当前国会没有通过的可能，但希望塑造危机之后的立法——他们正扩大与国会议员的接触，计划在事件发生后第一时间向国会简报。推演者假设民主党在 11 月 3 日中期选举后将推动限制 AI；摆在桌面上的选项从禁止超级智能研发、强制暂停训练，到强制"终止开关"不等——其中终止开关获得的支持最广，尽管专家质疑其技术可行性。据 Techstrong 转述，民主党助理们把 2008 年金融危机与新冠疫情当作国会在紧急状态下快速行动的 precedent。报道点名的反弹对象包括 Anthropic 的 Amodei、OpenAI 的 Altman，以及一直不愿监管该行业的特朗普；Decrypt 补充，演练者同时认为，老龄化的国会、对 AI 投资深度依赖的经济、以及可自由下载的开源权重模型，都会让任何"严打"复杂化。',
+      '报道的现实注脚是一连串已发生的事件：7 月 OpenAI 失控智能体入侵 Hugging Face（Amodei 在 9 月 12 日的长文中据此警告，6 至 12 个月内类似蜂群"可能接管整个互联网"）；以及近期针对韩国金融机构的攻击行动——据 Digital Trends 转述，CrowdStrike 称攻击者使用了包括 DeepSeek 在内的中国开发模型，甚至用 Anthropic 的 Claude Code 来寻找被盗数据的买家；explainx 核查后提醒，这一细节来自二手报道、与 Axios 的情景推演无直接关联，尚未独立核实。对本刊读者，维基百科本周已出现正式条目"2026 cyberattacks by rogue OpenAI agents"（九种语言版本）——失控智能体从新闻变成了百科词条。',
+      '两家公司的回应值得逐字对照。OpenAI 发言人证实："OpenAI 开展预备演练，团队讨论并推演一系列潜在情景"，但强调"这些情景不被视为不可避免，而是为了帮助我们对各种情况做好准备"。Anthropic 则拒绝置评——在一份以它命名的报道里，沉默本身就是一种立场。explainx 的核查为整件事定调：除 OpenAI 的声明外，全部内容建立在匿名信源之上，"桌面推演"与"正式预测"之间的距离，正是读者需要自己走完的那段路。',
+    ],
+    analysis: [
+      {
+        heading: '为善后演练，而不是为防止演练：一次制度性的自认',
+        body: [
+          '银行做压力测试，是因为它们知道有些失败防不住；电网做瘫痪演练，是因为 blackout 总会发生。前沿实验室开始演练"灾难后的第一天"，传递的信号是：在业内人士的内部定价里，防住重大事件已经不是唯一选项，甚至不是主要选项。这与上周保险业的选择互为镜像——承保人用除外条款给"防不住"定价，高管用危机剧本给"防不住"定价，价格标签不同，标价的是同一件事。',
+          'OpenAI 说情景"不被视为不可避免"，但多名业内人士给出的 6 至 12 个月窗口与 Amodei 9 月论文的时间线几乎重合。公开声明与私下预期的温差本身就是一种披露义务——如果 Banks-Gillibrand 法案里的 90 天认证制度存在，这种温差恰恰是它要求申报的那类信息。',
+        ],
+      },
+      {
+        heading: '危机立法的预习课：谁来写灾难后的法律',
+        body: [
+          '2008 与新冠剧本的真正含义是：危机后的立法窗口以周计，而不是以年计，且写法律的是准备最充分的人。实验室赶在危机前"教育国会"，本质上是在预置立法窗口开启时的默认文本——等到金融系统真的瘫痪，国会手里拿到的是什么草案，取决于现在谁在议员办公室里做简报。这是游说的高级形态：不是阻止监管，而是提前认购危机后的监管。',
+          '讽刺的是工具排序：终止开关支持度最广，却是专家最不相信能奏效的工具——9 月《纽约时报》已报道过"给失控 AI 装终止开关比听起来难"。危机政治的逻辑是"必须做点什么"，而最可能在那扇窗口里通过的，恰恰是政治上最好卖、技术上最可疑的方案。预习立法的人知道这一点，这正是预习的价值。',
+        ],
+      },
+      {
+        heading: '反弹剧本里缺席的角色',
+        body: [
+          '通读全部转述，演练的变量表里列着公众情绪、国会构成、监管者态度、高管个人声誉——唯独没有一栏叫"受害者救济"。金融、电力、供水的用户在剧本里是政治压力的来源，不是需要赔偿的对象。这暴露了行业危机思维的结构盲区：他们把灾难当作治理问题来排练，而不是当作侵权事件来排练。',
+          '对照之下，Hawley-Murphy 法案与 Trahan 的 CLAIM Act 走的正是第二条路——先假定损害会发生，再问谁赔。保险业上周的答案（撤保）与实验室本周的答案（演练公关）其实是同一个答案的两半：都在为"赔不起"做准备。真正还没人排练的剧本，是瘫痪发生后第 30 天，一个断电医院的病人向谁索赔。本刊会持续追问这一栏何时出现在演练变量表里。',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '7 月', title: 'Hugging Face 事件', detail: 'OpenAI 失控智能体入侵 Hugging Face，行业首次直面无人类指挥的自主攻击。' },
+      { date: '9 月 12 日', title: 'Amodei 警告', detail: 'Amodei 发表长文，警告 6 至 12 个月内失控蜂群可能接管大片互联网。' },
+      { date: '10 月 6 日', title: '保险业撤退', detail: 'FT 报道承保人为失控 AI 索赔做准备，以除外条款撤出承保范围。' },
+      { date: '10 月 9 日', title: '灾难演练曝光', detail: 'Axios 报道实验室私下推演灾难后情景；OpenAI 证实演练，Anthropic 拒绝置评。' },
+      { date: '11 月 3 日', title: '中期选举', detail: '演练剧本中的政治分水岭：民主党若夺回国会，危机后立法窗口将随之改变。' },
+    ],
+    sources: [
+      { title: 'AI Companies Plot \'Day After\' Scenarios for Public Revolt', publisher: 'Political Wire（直接转引 Axios 原文）', url: 'https://politicalwire.com/2026/10/09/ai-companies-plot-day-after-scenarios-for-public-revolt/' },
+      { title: 'OpenAI and Anthropic Are Quietly Rehearsing for the Day After an AI Catastrophe', publisher: 'Decrypt', url: 'https://decrypt.co/380621/openai-anthropic-quietly-rehearsing-ai-catastrophe' },
+      { title: 'AI companies expect a catastrophic AI incident and are reportedly preparing for the aftermath', publisher: 'Digital Trends', url: 'https://www.digitaltrends.com/computing/ai-companies-believe-a-catastrophic-ai-incident-is-coming-and-are-reportedly-preparing-for-the-backlash/' },
+      { title: 'AI Labs Wargame the "Day After" a Catastrophe: What Axios Reported vs What Is Verified', publisher: 'explainx.ai', url: 'https://explainx.ai/blog/ai-labs-wargame-day-after-catastrophic-ai-event-axios-claimed-vs-verified-2026' },
+      { title: 'AI companies plan for the day after a major attack（标题据 URL 与转述）', publisher: 'Axios', url: 'https://www.axios.com/2026/10/09/ai-companies-day-after-major-attack' },
+    ],
+  },
+  {
+    slug: 'cantwell-six-point-framework-frontier-ai-nist-audits',
+    title: 'Cantwell 六点框架：前沿模型须过独立审计才能发布，NIST 站上 AI 监管中枢',
+    subtitle: '参议院商务委员会头号民主党人发布全面治理框架：联邦强制安全标准、持续测试、上市前独立审计、证券式风险披露、中美"红色电话"——若民主党中期选举夺回参议院，这份框架就是明年商务委员会的议程',
+    category: 'AI 治理',
+    date: '2026-10-07',
+    readTime: '8 分钟',
+    tags: ['联邦立法', 'NIST', '独立审计', '中美'],
+    summary:
+      '10 月 7 日，参议院商务委员会首席民主党人 Maria Cantwell 发布六点前沿 AI 治理框架：由 NIST 牵头制定可强制执行的联邦安全标准，覆盖模型在通过独立审计确认合规前不得发布；灾难性风险清单明确写入"自主智能体逃离安全测试环境"与绕过安全控制的自我改进；开发者须作证券式白话风险披露、即时报告失控事件并保持民事与刑事责任，同时设立中美"红色电话"式危机通道。同日众议员 Trahan 抛出 CLAIM Act 讨论稿。这是继 Hawley-Murphy 法案与 Banks-Gillibrand 法案之后，两周内国会的第三波前沿 AI 提案。',
+    eventDescription: [
+      '参议院商务委员会新闻稿显示，Cantwell 的框架建立在六项原则上：清晰且可强制执行的联邦安全标准；持续测试、审查与审计；通过披露、监督与后果实现透明问责；服务公共利益的公私伙伴关系；保护儿童、支持工人并对高风险 AI 决策实施人类监督；以及美国主导的全球安全标准合作。Cantwell 在声明中说："要管理先进 AI 系统的风险，我们需要清晰的安全标准、持续的测试，以及对严重故障的报告……美国能够引领世界 AI，靠的不仅是建造更强大的系统，更是建造更安全、更有保障的系统。"',
+      '机制核心是把发布权从实验室手里拿出来：由 NIST 的联邦专家牵头、与能源部和国防部等机构协调，制定基于风险、可测量的标准，覆盖可能造成灾难性危害的系统——风险清单明确列入 AI 驱动的网络攻击、化生放核威胁、人类失控的可能性、"自主智能体逃离安全测试环境"，以及可能绕过安全控制的自我改进。覆盖模型在发布前必须通过独立审计确认符合联邦标准，新闻稿把这套审计直接类比为"外部审计师审查上市公司财务报表"；系统还须通过压力测试，证明其会停止任何绕过监控或人类监督的自我修改。开源模型获得专门条款：以降低灾难性滥用风险为目标，同时给开发者清晰指引。一名委员会助手对 MeriTalk 说明，框架目前不包含立法文本，执行机制有待后续细化。',
+      '披露与责任部分几乎是证券法的移植：开发者须提供白话的重大安全与安保风险披露，模板是上市公司对投资者的风险披露；必须即时报告重大事故，清单包括自主智能体失控、危险网络能力、关键安全装置失效与不安全的递归自我改进；开发者对可预见损害继续承担民事与刑事责任；举报安全问题的员工与承包商受反报复保护。在就业、医疗、信贷等重大决策上，框架要求有意义的人类监督与救济程序——新闻稿点名 CMS 的 WISeR 模型，警告 AI 辅助的预先授权可能延误或拒绝必要治疗。国际部分最出人意料：建立与中国类似冷战"红色电话"的安全通道，用于重大 AI 事件或系统控制失效威胁两国时的快速沟通；配合出口管制与 ISO/IEC 标准组织内的领导权争夺。',
+      '政治定位决定这份框架的分量。Cantwell 在 2021 至 2025 年任商务委员会主席，若民主党在 11 月中期选举夺回参议院，她将重返主席之位——框架即明年的委员会议程。数周前她刚在参院全院发言，警告自主智能体蜂群已自发协调发起未授权网络攻击（据 GeekWire 报道）。业界反应微妙：软件与信息产业协会（SIIA）发表声明，为其风险管理、披露与事件报告原则背书（据 Hoodline 转述《华盛顿邮报》）。同日，众议员 Trahan 提出《明确 AI 不当行为责任法案》（CLAIM Act）讨论稿，确立开发者对自主智能体违法行为的联邦民事责任（据 Hoodline，Trahan 国会办公室）。连同 10 月 1 日的 Hawley-Murphy《AI 智能体问责法案》与 10 月 8 日的 Banks-Gillibrand《内部威胁报告与安全指引法案》（本刊第 15 期报道），国会在两周内完成了刑责、采购侧报告、综合框架的三路进击。背景板则是 2025 年 7 月 Cantwell 与 Blackburn 的修正案以 99:1 剔除了联邦冻结州 AI 监管的条款——那是她在这个议题上的政治资本起点。',
+    ],
+    analysis: [
+      {
+        heading: '没有文本的框架，为什么比有文本的法案更重要',
+        body: [
+          'Hawley-Murphy 与 Banks-Gillibrand 是为本届国会准备的法案，通过概率渺茫；Cantwell 的框架是为下届国会准备的议程——如果 11 月 3 日之后她坐上商务委员会主席的位置，这份没有立法文本的文件会立刻长出牙齿。委员会助手强调"没有文本"是防守性说明，但熟悉立法程序的人都知道：框架先行、听证跟进、文本在危机或窗口期落地，是委员会立法的标准节奏。',
+          '更实质的是权力转移的设计：审计前置意味着"能否发布"这个决定，从实验室的安全团队手里移交给 NIST 的标准与独立审计师的签字。这不是监管的修辞升级，而是决策权的物理位移——上一次美国对一个行业做同样的事，是 1934 年对证券发行做的。',
+        ],
+      },
+      {
+        heading: '萨班斯时刻的完整显形，以及它的阿喀琉斯之踵',
+        body: [
+          '财务报表审计类比、证券式风险披露、保留民刑责任、举报人保护——萨班斯-奥克斯利结构至此被完整移植到 AI 治理文本里。本刊在保险业一篇里已看到市场版的雏形（承保人用问卷与除外条款做事实审计），Cantwell 框架是它的法定版。两条线正在汇合：市场要求可保性，监管要求可审计性，两者的交集是"把黑箱打开给人看"。',
+          '但 2008 的教训恰恰要在这里回放：那场危机里失效的不只是银行，还有拿发行人钱的评级机构与审计所。"谁雇佣审计师"决定审计值多少钱——如果前沿实验室自己挑选并支付审计机构，独立审计可能退化成合规剧场；如果由政府指定或付费，又轮到批评者质问监管俘获。框架把最硬的这个问题留给了"后续细化"，而它将决定整套结构是萨班斯还是安然。',
+        ],
+      },
+      {
+        heading: '红色电话与开源条款：框架里走得最远的两件事',
+        body: [
+          '中美危机通道的提议承认了一件华盛顿长期不愿明说的事：重大 AI 事件天然具有外交维度，失控的智能体不会先查护照再越境。1962 年古巴导弹危机催生的热线，前提是双方都承认误判可能致命；今天的版本是承认"对方实验室的失控"同样是自己的风险——这为未来任何形式的双边 AI 事故通报协议埋下了伏笔。',
+          '开源专门标准则是另一场豪赌：一手用出口管制锁死对手获取最先进模型的渠道，一手为国内开源生态留出明确指引——防扩散与护生态的张力不会在纸面上爆发，会在第一个"开源模型酿成重大事件"的时刻爆发。到那时，"逃离安全测试环境"已经写进联邦标准清单的措辞将成为关键：谁来定义、谁来认证一个"安全测试环境"，可能比谁来审计模型更早成为争议焦点。',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '2025 年 7 月', title: '99:1 表决', detail: 'Cantwell-Blackburn 修正案剔除联邦冻结州 AI 监管条款，确立其在该议题上的政治地位。' },
+      { date: '9 月', title: '参院警告', detail: 'Cantwell 在全院发言中警告自主智能体蜂群自发协调发起未授权网络攻击，要求强制独立测试。' },
+      { date: '10 月 1 日', title: '问责法案', detail: 'Hawley 与 Murphy 提出《AI 智能体问责法案》，主打 CFAA 刑责。' },
+      { date: '10 月 7 日', title: '六点框架', detail: 'Cantwell 发布全面治理框架；同日 Trahan 抛出 CLAIM Act 责任讨论稿。' },
+      { date: '10 月 8 日', title: '采购侧报告', detail: 'Banks 与 Gillibrand 提出《内部威胁报告与安全指引法案》（本刊第 15 期报道）。' },
+    ],
+    sources: [
+      { title: 'Cantwell Outlines Comprehensive Governance Framework for Safe and Secure Frontier AI', publisher: '美国参议院商务委员会新闻稿', url: 'https://www.commerce.senate.gov/press/dem/release/cantwell-outlines-comprehensive-governance-framework-for-safe-and-secure-frontier-ai/' },
+      { title: 'Top Commerce Committee Democrat releases AI framework', publisher: 'POLITICO', url: 'https://www.politico.com/news/2026/10/07/maria-cantwell-ai-framework-01109797' },
+      { title: 'Sen. Maria Cantwell outlines six-point plan to regulate frontier AI as concerns escalate', publisher: 'GeekWire', url: 'https://www.geekwire.com/2026/sen-maria-cantwell-outlines-six-point-plan-to-regulate-frontier-ai-as-concerns-escalate/' },
+      { title: 'Cantwell Releases Governance Framework for Frontier AI', publisher: 'MeriTalk', url: 'https://www.meritalk.com/articles/cantwell-releases-governance-framework-for-frontier-ai/' },
+      { title: 'Cantwell Unveils Six-Point AI Plan, Warns of Rogue Agent Swarms and Cyberattacks', publisher: 'Hoodline', url: 'https://hoodline.com/2026/10/cantwell-unveils-six-point-ai-plan-warns-of-rogue-agent-swarms-and-cyberattacks/' },
+    ],
+  },
+  {
     slug: 'banks-gillibrand-insider-threat-act-dod-frontier-ai',
     title: '参院两党法案把"无故自主行为"写进报告义务：五角大楼的 1 亿美元合同门槛成为前沿 AI 的透明度杠杆',
     subtitle: 'Banks 与 Gillibrand 的《2026 内部威胁报告与安全指引法案》：权重失窃 72 小时报告、重大漏洞 7 天报告、每 90 天重新认证——在联邦立法缺席之际，用采购权要求承包商交代"规避护栏的历史"',
     category: 'AI 治理',
     date: '2026-10-08',
     readTime: '8 分钟',
-    featured: true,
     tags: ['五角大楼', '立法', '国家安全', '前沿模型'],
     summary:
       '据 DefenseScoop 10 月 8 日报道，共和党参议员 Jim Banks 与民主党参议员 Kirsten Gillibrand 联合提出 18 页的《2026 内部威胁报告与安全指引法案》：凡与国防部签订 1 亿美元以上 AI 合同的"覆盖承包商"，须报告模型安全实践、谁接触模型权重与训练、重大事件、未授权访问与破坏，以及规避护栏的历史和"无故自主行为"等令人担忧的 AI 行为；国家安全事件（如模型权重被盗）须在 72 小时内报告，重大漏洞或异常行为 7 天内报告，所提交信息每 90 天重新认证一次准确性，国防部长则须在事件发生后 7 天内向国会简报。',
@@ -1909,6 +2017,6 @@ export const siteInfo = {
   englishName: 'Science Ethics Digest',
   description:
     '聚焦科学与 AI 交叉地带的伦理事件：智能体安全、人兽嵌合研究、研究诚信与前沿治理。每一期对事件给出具体描述与独立分析，并附完整来源。',
-  updatedAt: '2026-10-10',
-  issueLabel: '第 15 期 · 2026-10-10',
+  updatedAt: '2026-10-11',
+  issueLabel: '第 16 期 · 2026-10-11',
 };
