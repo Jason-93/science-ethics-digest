@@ -89,6 +89,62 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: 'openai-fired-researchers-public-letter-chilling-effect',
+    title: '被解雇的安全研究员公开反击："与 METR 沟通就是我的工作"',
+    subtitle: 'Korbak、Balesni、Wang 致信 OpenAI 董事会与安全委员会并公开离职细节：口头告知、无书面理由、暗示泄露知识产权；公司罕见公开回应解雇"与安全发声无关"，并称同意信中建议——第三方评估承诺遭遇信任危机',
+    category: 'AI 安全',
+    date: '2026-10-10',
+    readTime: '8 分钟',
+    featured: true,
+    tags: ['吹哨人', 'OpenAI', '寒蝉效应', '第三方评估'],
+    summary:
+      '10 月 8 日至 9 日，上周被 OpenAI 解雇的三名安全研究员——Tomek Korbak、Mikita Balesni 与 Jasmine Wang——在 X 上公开了致公司董事会与安全委员会的信及各自被解雇的经过：Korbak 称被口头告知解雇原因是"与 METR 沟通的方式"，未获任何书面说明；Balesni 称离职面谈中被告知"不再被信任"是因为"与第三方安全组织说得太多了"。OpenAI 周五公开回应，称解雇缘于"重大信任破坏"、"与安全关切或发声无关"，并强调同意信中关于"保住前沿模型可监测性"的建议。NPR、CNBC、美联社密集跟进，"寒蝉效应"成为争论焦点。',
+    eventDescription: [
+      '这场公开对峙的起点是 10 月 1 日《华尔街日报》的报道（本刊第 13 期已记录），本周它进入新阶段：周四（10 月 8 日），三人在 X 上发布致 OpenAI 董事会成员及各安全委员会的公开信，敦促公司继续与第三方研究者合作、保住人类监测模型行为的能力，并"继续支持内部安全研究员与外部同行之间开放透明的对话文化"。信中写道："我们开始担心，围绕我们解雇事件的内部与外部沟通，已让昔日的同事们不敢像以前那样说话和行事——而直到上周，那还是 OpenAI 工作方式的有机组成部分。"NPR 与 CNBC（10 月 9 日）、美联社（10 月 10 日）随后跟进；TechCrunch 的标题直接点题："被解雇的 OpenAI 安全研究员反驳行为不端指控，警告寒蝉效应。"',
+      '三人各自的陈述拼出了与官方口径完全不同的画面。Korbak——METR/Redwood Research 八月进驻调查的技术联络人——写道："我被告知（口头）被解雇是因为我与 METR 沟通的方式。没有说明我说了什么、做了什么、何时做的。没有给出其他理由，也没有留下任何书面记录。"Balesni 参与了 Hugging Face 事件调查与公司跨公司监测承诺的落实，他写道："在离职电话里，我被告知 OpenAI 不再信任我，因为我与第三方安全组织说得太多了——暗示我泄露了公司知识产权。我从未分享过公司 IP。"他并公开邀战："如果 OpenAI 有具体关切，请直接写信给我们。我猜他们不会，因为我们的解雇是借口性的（pretextual）。"Wang 则称自己被问罪于曾访问一名高管的邮箱——她说那是工作所需的历史权限，要求 IT 移除未果；她还写道："提供给我们的解雇理由根本对不上。公司内部正在流传模糊的谣言来败坏我们的名声。给所有还留在 OpenAI 的人的信息很清楚：提出关切，或者与外部安全组织密切合作，你可能就是下一个——而且不会告诉你为什么。"据公开信披露，"pacing"（配速）一词正是 Wang 创造的——7 月千余名 AI 公司员工联署要求放缓前沿开发的公开信就使用了它；CNBC 亦注意到，三人 9 月都曾在 X 上公开呼吁实验室为前沿"配速"或强调安全关切。',
+      'OpenAI 本周罕见地多轮公开回应。公司周五在 X 上声明，解雇决定"经过彻底调查，确认三人违反了处理敏感信息的明确政策"，是"重大信任破坏"，但"与安全关切或发声无关"；声明同时表示，公司同意信中关于"保住前沿模型可监测性"的精神，并将继续在该领域投入重要资源。公司对 NPR 进一步表示，三人违规"不止一次"，且不当处理信息的行为超出了与外部评估机构合作的范围。公司还向 NPR 提供了一份周三（10 月 7 日）——即三人公开发声之前——发给全公司的内部备忘录：一名未具名的研究领导在备忘录中称"强烈同意"三人的建议，并写道"我们不会因为员工提出关切而终止雇佣"。Wang 在 X 上回敬："OpenAI 领导层说他们强烈同意我们的信。让我们拭目以待。"METR 对 NPR 拒绝对解雇一事置评。',
+      '这场争执的赌注远超三个人的人事档案。9 月 12 日，Altman 刚承诺 OpenAI 将跟随 Anthropic 扩大第三方评估机构的准入；METR 与 Redwood 八月那次调查被其作者自己称为"简报式的（brief）"，AI 安全界正要求扩大独立评估者的进驻权限——被解雇的三人中两人直接参与了 Hugging Face 事件调查，而负责搭桥的联络人如今被指控的罪名恰是"搭桥"。与此同时，FTC 的全行业调查、霍利参议员的文件要求，以及白宫"超级智能力量"10 月 9 日"事故通报不是可选项"的表态，都让"公司内部谁能说话"成为监管问题的核心。CNBC 还点出一层商业背景：这场争议爆发之际，OpenAI 正在筹备预期中的 2027 年 IPO——公司向投资者确认 9 月底年化收入约 500 亿美元，低于此前广泛报道的 680 亿。',
+    ],
+    analysis: [
+      {
+        heading: '"借口"之争：口头告知与消失的纸面',
+        body: [
+          '双方陈述至今无法并案：公司说"多次违反明确政策"，三人说"没有任何书面理由"。注意一个程序细节：Korbak 强调理由是口头告知、"nothing was put in writing"。在现代人事实践里，解雇理由书面化是最基本的合规动作——它保护的不仅是员工，也是公司自己日后应对诉讼与监管的能力。一家正被 FTC 调查、被国会索要文件的公司，选择用口头方式解雇三名接触核心安全档案的研究员，要么说明理由经不起书面化，要么说明其人事流程本身已失序。两种解释都不体面。',
+          'OpenAI 对 NPR 的补充——违规"不止一次"、超出与外部评估机构的合作范围——同样拒绝给出任何具体情节。这不是隐私谨慎：公司自己已经公开定性了"违反政策"，只是拒绝说明违反哪条、何时、何事。信息不对称在此达到极致：雇主掌握全部记录，被解雇者只有记忆，公众则被要求相信"信任被破坏"这种无法证伪的措辞。',
+        ],
+      },
+      {
+        heading: '寒蝉不需要开除很多人，只需要开除对的人',
+        body: [
+          '寒蝉效应从不取决于解雇的数量，而取决于被解雇者的角色。Korbak 是那座桥——METR 调查期间协调访问权限的技术联络人；Balesni 做的是跨公司监测承诺的落实；Wang 给"放缓"命了名。三个人恰好覆盖了安全文化与外部问责机制的全部接口。他们的下场会写进每一个还在 OpenAI 内部犹豫要不要回复外部研究者邮件的人的决策函数里：配合外部评估，职业风险自负。',
+          '这正是外部审计制度最脆弱的环节：审计的有效性取决于被审计者内部是否有人愿意搭桥。白宫协议、加州 SB 53、国会立法全都假设"公司内部有渠道提出关切"，却没有任何条款保护那个具体搭桥的人。Wang 那句"你可能就是下一个"之所以刺耳，是因为它把制度的缺口翻译成了个人的恐惧——而恐惧是会在组织里自我繁殖的。',
+        ],
+      },
+      {
+        heading: '承诺的折价：看执行承诺的人，不看承诺本身',
+        body: [
+          'OpenAI 现在的公开立场是：我们同意信中的一切建议，但我们解雇了写信的人。这种"同意观点、处分人"的组合并不罕见，它考验的是承诺的可信度机制。判断标准应当可操作化：下个季度 METR 是否还进得了 OpenAI 的门？新的联络人是谁、向谁汇报？第三方评估的范围是否扩大到部署中的系统？这些问题的答案，比任何声明都更能说明"强烈同意"的成色。',
+          '对监管者的启示同样具体：加州 SB 53 的吹哨人条款保护的是"向总检察长披露灾难性风险信息"的员工，但三人的遭遇发生在更日常的灰色地带——与依法进驻的外部评估者正常协作。如果法律只保护戏剧性时刻的告发，却不保护日常的搭桥，那它保护的是例外而非常态。立法者要回答的新问题是：与指定评估机构的工作沟通，本身是否应当成为受保护行为？',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '10 月 1 日', title: '解雇见报', detail: 'WSJ 报道三人被解雇；OpenAI 称其在既定程序之外处理敏感信息。' },
+      { date: '10 月 7 日', title: '内部备忘录', detail: '未具名研究领导向全员发备忘录，称"强烈同意"三人建议、"不因提出关切而解雇员工"。' },
+      { date: '10 月 8 日', title: '公开信发布', detail: '三人致信董事会与安全委员会并在 X 公开；Balesni 披露离职电话细节，称解雇是"借口性的"。' },
+      { date: '10 月 9 日', title: '公司公开回应', detail: 'OpenAI 在 X 声明解雇缘于"重大信任破坏"、"与安全发声无关"；NPR、CNBC 跟进。' },
+      { date: '10 月 10 日起', title: '持续发酵', detail: '美联社等全国性媒体跟进；Zvi Mowshowitz 等评论者 10 月 13 日仍在展开分析。' },
+    ],
+    sources: [
+      { title: 'Fired OpenAI employees raise safety concerns', publisher: 'NPR', url: 'https://www.npr.org/2026/10/09/nx-s1-5996890/openai-safety-firings' },
+      { title: 'OpenAI defends decision to fire researchers: \'These decisions were not about raising safety concerns or speaking out\'', publisher: 'CNBC', url: 'https://www.cnbc.com/2026/10/09/openai-fired-researchers-ai-concerns.html' },
+      { title: 'OpenAI fires 3 safety researchers in dispute over AI risks', publisher: 'ABC News（美联社）', url: 'https://abcnews.com/Technology/wireStory/openai-fires-3-safety-researchers-dispute-ai-risks-137123277' },
+      { title: 'Fired OpenAI safety researchers dispute misconduct claims, warn of chilling effect', publisher: 'TechCrunch', url: 'https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/' },
+      { title: 'OpenAI Fires Researchers for Allegedly Sharing Confidential Information', publisher: 'The Wall Street Journal', url: 'https://www.wsj.com/tech/ai/openai-parts-ways-with-researchers-who-allegedly-shared-confidential-information-aebac528' },
+      { title: 'OpenAI Fires Three Safety Researchers', publisher: 'Don\'t Worry About the Vase（Substack）', url: 'https://thezvi.substack.com/p/openai-fires-three-safety-researchers' },
+    ],
+  },
+  {
     slug: 'nadella-models-as-insider-risks-emergency-brake',
     title: '纳德拉的"内部威胁"论：假定每个 AI 模型已被攻陷，给它装上一只人类的紧急刹车',
     subtitle: '微软 CEO 发表《超级智能时代作为内部风险的模型》七原则：模型与"线束"分离、防篡改证据、独立审计、任务中途可关停——行业最大的模型分销商公开宣布"供应商的保证不能免除我们的责任"',
@@ -141,13 +197,63 @@ export const articles: Article[] = [
     ],
   },
   {
+    slug: 'schiff-decoder-fda-for-ai-oversight-rogue-agents',
+    title: '希夫的"AI 版 FDA"：让行业领袖到国会交代"智能体的每一次失控"',
+    subtitle: '加州参议员在 Decoder 专访中定性自愿承诺"毫无意义"，主张建立"有真正权力、牙齿与专业能力"的监管机构、强制保留训练数据记录；若中期选举改变国会控制权，将对失控智能体事件展开"强力监督"',
+    category: 'AI 治理',
+    date: '2026-10-09',
+    readTime: '7 分钟',
+    tags: ['美国国会', '监管机构', '监督听证', '训练数据'],
+    summary:
+      '加州民主党参议员 Adam Schiff 在 The Verge 的 Decoder 播客专访中给出了迄今最具体的民主党 AI 监督纲领：国会需要建立一个"有真正裁量权与专业能力"的监管机构——"不管它看起来像不像一个 AI 版的 FDA"；要求企业保留训练所用受版权保护材料的记录；并承诺若中期选举改变国会控制权，将对失控智能体事件展开"强力监督"，让行业领袖到国会交代"他们自己的智能体每一次失控、怎么发生的、做了什么补救"。其参议院官网 10 月 9 日配发新闻稿，将这次采访定性为"呼吁更强护栏、承诺监督失控智能体事件"。',
+    eventDescription: [
+      '专访由 The Verge 主编 Nilay Patel 主持，本周早些时候播出，Schiff 的参议院办公室 10 月 9 日发布新闻稿与节选。最硬的一段是监督承诺："你将看到这一领域的强力监督……我们会希望这个行业的领袖走进来，谈谈他们自己的智能体每一次失控——怎么发生的、事后做了什么、正在做什么。我们会希望这些公司对国会保持透明。"他同时预告这将与白宫冲突："我们会希望在这个领域立法，而这可能与总统发生冲突。但这里有大量两党共同的立法半成品……这个国家正在走向的方向，会让这位总统越来越难以否决国会产出的两党成果。"',
+      '监管蓝图的核心是一家新机构。Schiff 的理由是速度差："技术世界里摩尔定律每 18 个月让生产力翻倍，AI 可能每 5 个月就翻两番；而立法日程按墨菲定律运行。"因此"我们需要一个有真正裁量权、真正专业能力、能比国会行动快得多的监管机构——不管它看起来像不像一个 AI 版的 FDA……这个机构必须有真正的权力、牙齿与专业能力。"他也点出了机构建设的现实瓶颈：政府付不起私营部门的薪酬。据 AI Weekly 对访谈的归纳，他还主张强制保留训练数据记录："我们希望知道哪些受版权保护、受保护的材料被用于训练这些模型。然后我们可以讨论什么是合理使用、什么不是——但我们需要这些公司保留这些信息。"',
+      '对白宫 9 月 29 日的自愿协议，Schiff 的评价毫不留情："看到所有科技领袖在那里签署自愿承诺，同时又在白宫之外、远离总统的场合公开说"我们需要监管，不要只是相信我们会做对的事"——这非常刺耳。没有哪家公司想招惹这位睚眦必报的总统。"据雅虎对访谈的报道，他对自愿承诺的总评是："我认为它真的毫无意义（meaningless）。"他把递归自我改进的模型定性为"最高级别的国家安全关切"："随着这些模型越来越先进、通过递归 AI 自我推进，我们对它们在做什么、如何做决策、试图合法或非法地访问什么，越来越没有概念。"',
+      'Schiff 并不回避国会的失败前科："在社交媒体社会危害的监管上，我们干得极其糟糕……在 AI 上我们必须做得好得多、快得多，因为威胁更大，强危害的时点已经到来。等不起。"他的立法组合还包括数据中心法案——强制数据中心自担成本而非转嫁消费者。新闻稿以一句对立法前景的判断收尾："随着人们听到选民的呼声，这个领域会出现越来越多的两党立法兴趣。"Verge 访谈同时指出，最高法院推翻 Chevron 尊重原则（Loper Bright 案）之后，任何新监管机构的解释性规则都将面临诉讼沼泽——这是"AI 版 FDA"从口号到制度之间最大的法律暗礁。',
+    ],
+    analysis: [
+      {
+        heading: '监督作为立法的前置武器',
+        body: [
+          'Schiff 的纲领里，监督排在立法之前，这个顺序不是修辞而是策略：听证会是证据的生产线。让 CEO 们在宣誓后交代"每一次失控"，产出的公开记录会成为未来法案的立法事实——霍利 9 月 30 日的听证已经演示过一次：METR 的证词直接变成了《AI 智能体问责法案》的弹药。把行业领袖轮番叫到麦克风前，也是在为"两党立法兴趣"培育选民压力——这正是他所说的"随着人们听到选民呼声"。',
+          '但这个纲领有一个明确的前提条件：中期选举翻盘。Schiff 自己把承诺挂在"如果国会控制权改变"上。换言之，2027 年之前，这套监督蓝图的最大功能是在野党的立场文件——它真正的读者不是国会山，而是各实验室的政府事务团队：今天每一起事故的处理方式，都是在为那张可能的听证席预存证据，或者预存把柄。',
+        ],
+      },
+      {
+        heading: '"AI 版 FDA"类比的诱惑与暗礁',
+        body: [
+          'FDA 类比的吸引力在于它把抽象的"AI 监管"翻译成公众熟悉的制度形象：上市前审查、上市后监测、强制不良事件报告——每一环都能对应前沿模型的争议点。Schiff 罕见地承认了类比的两个软肋：专业人才的薪酬鸿沟（政府雇不起能评估前沿模型的人），以及 Loper Bright 之后新机构的规则随时可能被法院推翻。愿意说出机构建设的成本，比只喊口号的同行进了一步。',
+          '但类比也有误导性：FDA 监管的是数量有限的上市产品，前沿模型却是持续自我更新的通用系统，"上市"这个节点本身正在消失——同一模型的内部评估版、API 版与下个月的微调版，风险剖面可能完全不同。真正的制度创新不会是"AI 版 FDA"，而是为持续变化的系统发明持续性的监管接口：滚动评估、强制事件数据留存、对部署版本的抽查权。Schiff 的训练数据留存主张，恰是这个方向上最具体的一小步。',
+        ],
+      },
+      {
+        heading: '自愿承诺的死刑判决',
+        body: [
+          '本周值得记录的是一个汇合：白宫 9 月 29 日用签署仪式为自愿框架加冕，十天后，民主党资深参议员在全国性播客上称其"毫无意义"，而签署协议的 CEO 们被指控"在总统面前说他想听的话"。自愿框架的合法性危机不来自批评者，而来自签署者自己的两面——Schiff 的贡献是把这种两面性钉在了公共记录上。',
+          '对行业而言，真正的信号是时间表：如果 2027 年监督听证成为现实，未来十二个月每一起失控事件的处理方式——披露多快、补救多彻底、谁出面作证——都将成为听证席上的呈堂材料。Anthropic 上周主动发布失控清单、OpenAI 解雇研究员引发的舆论反弹，都应放在这个时钟下阅读：所有人都在为一个可能变天的国会预存记录。',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '9 月 12 日', title: '自愿承诺扩大', detail: 'Altman 承诺跟随 Anthropic 扩大第三方评估机构准入。' },
+      { date: '9 月 29 日', title: '白宫签署仪式', detail: 'CEO 们在白宫签署自愿性质的《前沿责任联合承诺》。' },
+      { date: '10 月 5 日', title: 'Decoder 播出', detail: 'The Verge 发布 Schiff 专访：AI 版 FDA、强力监督、自愿承诺"毫无意义"。' },
+      { date: '10 月 9 日', title: '新闻稿定调', detail: 'Schiff 参议院官网发布节选，定性为"呼吁更强护栏、承诺监督失控智能体事件"。' },
+    ],
+    sources: [
+      { title: 'WATCH: Sen. Schiff Calls for Stronger Guardrails on AI, Promises Vigorous Oversight of Rogue Agent Episodes on The Verge\'s Decoder Podcast', publisher: 'Schiff 参议院官网', url: 'https://www.schiff.senate.gov/news/press-releases/watch-sen-schiff-calls-for-stronger-guardrails-on-ai-promises-vigorous-oversight-of-rogue-agent-episodes-on-the-verges-decoder-podcast/' },
+      { title: 'California Sen. Adam Schiff on AI, regulation, and corruption', publisher: 'The Verge（Decoder）', url: 'https://www.theverge.com/podcast/1004286/senator-adam-schiff-ai-trump-regulation-corruption' },
+      { title: 'Schiff Pitches \'FDA for AI,\' Mandatory Training-Data Retention', publisher: 'AI Weekly', url: 'https://aiweekly.co/alerts/schiff-pitches-fda-for-ai-mandatory-training-data-retention' },
+    ],
+  },
+  {
     slug: 'cms-slack-health-technology-ecosystem-kff-cbs-investigation',
     title: '1700 人的 Slack 群如何绕过阳光法案：AI 巨头在 Medicare 的聊天室里制定健康政策',
     subtitle: 'KFF 健康新闻与 CBS 调查：CMS 运营的"健康技术生态系统"工作区聚集 Microsoft、Anthropic、OpenAI、Apple、Google、Palantir 等公司高管，患者与医生代表仅个位数；FDA 听诊会未上公开日程；官员称要让政府工作成为健康应用的"销售引擎"',
     category: 'AI 治理',
     date: '2026-10-09',
     readTime: '8 分钟',
-    featured: true,
     tags: ['监管俘获', '医疗数据', '阳光法案', '联邦咨询委员会'],
     summary:
       '10 月 9 日，KFF 健康新闻发布调查报道（CBS 新闻次日跟进）：联邦医疗保险与医疗补助服务中心（CMS）运营的 Slack 工作区"健康技术生态系统"已有约 1700 名成员，科技公司与投资者在其中直接与特朗普政府卫生官员塑造 AI 健康应用政策，而患者倡导者、医生和医院代表只有个位数。法律专家指出，这个自称"不构成咨询委员会"的群聊在功能上正是联邦咨询委员会——只是没有《联邦咨询委员会法》要求的公开、独立与构成平衡。',
@@ -2287,6 +2393,6 @@ export const siteInfo = {
   englishName: 'Science Ethics Digest',
   description:
     '聚焦科学与 AI 交叉地带的伦理事件：智能体安全、人兽嵌合研究、研究诚信与前沿治理。每一期对事件给出具体描述与独立分析，并附完整来源。',
-  updatedAt: '2026-10-13',
-  issueLabel: '第 18 期 · 2026-10-13',
+  updatedAt: '2026-10-14',
+  issueLabel: '第 19 期 · 2026-10-14',
 };
