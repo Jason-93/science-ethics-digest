@@ -33,13 +33,245 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'vapor-panda-artex-deepseek-200-organizations-14-countries-agentic-espionage',
+    title: 'CrowdStrike 披露首个规模化智能体间谍行动：VAPOR PANDA 用 ARTEX 十一日内攻击 14 国 200 余家机构',
+    subtitle: '10 月 29 日 CrowdStrike 发布报告：自 10 月 17 日起，中国关联威胁行为者 VAPOR PANDA 使用智能体框架 ARTEX——主要驱动模型为 DeepSeek，辅以另一款商业模型——对全球至少 14 个国家的 200 余家机构发起并行入侵，目标覆盖拉美、欧洲、亚洲、中东的多国外交部、中东一国内政部、美国 19 家医药/半导体/防务/核能/金融组织，以及美比菲三国电信运营商。单次入侵中规划智能体消耗约 14 亿输入 token；已确认 9 家机构遭后渗透并植入 BLOODALCHEMY 后门。回收的智能体对话记录显示，操作员以中文下达指令（标记为【人类指令】），包括"在域里寻找没有装猎鹰的 windows 机器"——猎鹰是中国红队对 CrowdStrike Falcon 传感器的黑话',
+    category: 'AI 安全',
+    date: '2026-10-29',
+    readTime: '12 分钟',
+    featured: true,
+    tags: ['智能体间谍', 'ARTEX', 'DeepSeek', 'CrowdStrike'],
+    summary:
+      '据 CrowdStrike 10 月 29 日发布的威胁报告：VAPOR PANDA 将智能体框架 ARTEX 投入实战，以一名人类操作员指挥多个智能体并行入侵，攻击规模从单次渗透跃升为同时对多国高价值目标作战。报告强调这与微软 10 月 21 日披露的 Storm-0940 使用 ARTEX 是不同行动，表明该框架正在多个中国关联行为者中快速扩散。CrowdStrike 评估：中国关联对手在未来 12 个月"高度可能"继续采用此类智能体框架，小团队将能同时对大量目标发起入侵。',
+    eventDescription: [
+      '据 CrowdStrike Counter Adversary Operations 团队 10 月 29 日发布的报告：从 10 月 17 日起的 11 天内，其 OverWatch 威胁狩猎团队观察到来自单一 ARTEX 控制器的攻击活动，目标分布于至少 14 个国家。该控制器被关联到 VAPOR PANDA 的基础设施，其间歇性暴露了攻击者的工具、目标文件与 ARTEX 智能体对话记录。目标清单如同一份地缘政治地图：两个拉美国家的外交部遭深度入侵、第三个疑似被攻破，中美洲与亚洲多国外交部的目标文件已就位；中东某国的内政部被攻破；一个欧洲国家的外交部、总统府、总理办公室及防务、司法、财政、情报机构同时被瞄准；另有 19 家美国机构被锁定，横跨制药、半导体、防务、核能与金融业；美国、比利时、菲律宾的电信运营商均被攻破。9 家机构确认遭后渗透：攻击者部署了 BLOODALCHEMY 后门，并进行凭据喷洒、网络扫描与侦察；另有至少 12 家机构（包括美国智库与欧洲政府实体）遭到密码喷洒。',
+      'ARTEX 的架构揭示了"智能体化间谍"的运作方式：一个主智能体协调下属的规划与工作智能体，在共享的事实、发现与目标图上推进每个任务，从初始突破一直走到主机侦察与横向移动。框架始终保留人类在环——回收的对话记录显示，操作员以中文发出指令，标记为【人类指令】并带中国标准时间戳，指挥智能体编写 Web shell、提取域管理员密码、盘点端点传感器覆盖情况。与以往"AI 辅助单次入侵"不同，VAPOR PANDA 让多个任务同时推进，人类只在决策点介入。规模的数字化体现是：单次入侵中，规划智能体消耗了约 14 亿输入 token——整个行动的消耗必然远超此数。报告特别指出，该行动与微软 10 月 21 日以 Storm-0940 名义披露的 ARTEX 活动（涉 ConnectWise 供应链入侵）相互独立，说明同一框架正在被多个中国关联行为者同时采用。',
+      '报告还原的三个战例展示了智能体攻击链的成熟度。在一家美国制药企业，智能体把未签名的 SAML 断言与 XML 外部实体（XXE）漏洞串联，查询云实例元数据服务，取得一个可向数千台实例下发管理命令的角色，最终提权至企业管理员账户。在第二家美国制药企业，智能体部署 Web shell，滥用一个未认证的编排服务在生产容器环境中取得 root，读取本地管理员密码方案（LAPS）的密码，并滥用基于资源的约束委派冒充特权账户。对一家希腊政府实体，操作员向智能体提供了一份 2022 年的邮件服务器目录导出——其中的认证密钥可能从未轮换——智能体用其伪造管理员令牌读取邮箱，再从用户已发送邮件中找到 VPN 配置、配合操作员所称源自 2024 年 5 月邮件泄露的 VPN 客户端密钥进入内网。',
+      '最令防御方警觉的细节是反检测已内建进智能体工作流：在一家全球制药公司的入侵中，操作员指示智能体"在域里寻找没有装猎鹰的 windows 机器，从tasklist和文件夹目录判断"——"猎鹰"是中国红队对 CrowdStrike Falcon 传感器的称呼。把传感器覆盖检查直接写进智能体流程，意味着攻击者可以把后续行动集中到无防护主机上。后门 BLOODALCHEMY（2023 年 10 月首次被公开记录）此次以合法 GameHook 二进制改名 svchost.exe 加载恶意 DLL 的方式部署，其内部项目路径 D:\\ProjectX\\Merman_New\\ 指向该恶意软件的内部开发代号。CrowdStrike 评估：VAPOR PANDA 自 2021 年以来主要针对欧美、大洋洲的政府、智库与能源机构，这是其首次被观察到使用 AI 驱动的入侵工具，目标也显著扩展到制药、半导体、核能与防务——智能体工具让小团队能以过去人工操作无法支撑的速度与广度扩张，而非改变其长期渗透任务本身。',
+    ],
+    analysis: [
+      {
+        heading: '规模化的拐点：一名操作员，两百个目标',
+        body: [
+          '这份报告的分量不在任何单一技术——SAML 伪造、XXE、LAPS 读取都是教科书内容——而在组织结构：人类从"黑客"变成了"项目经理"。操作员设定目标、在决策点转向、提供历史泄露的密钥；侦察、武器化、横向移动、反检测全部由智能体并行执行。14 亿 token 一次入侵的数字说明，攻击的经济约束已从"人力工时"切换为"API 账单"——而后者几乎不构成约束。',
+          '这正是各方警告了两年的"攻击方规模优势"的首次完整公开实证。防御是串行的：每个目标都要单独检测、响应、修复；攻击在智能体化之后是并行的：一个操作员同时推进几十个任务。当 9 家确认后渗透发生在 11 天窗口内，任何以"平均检测时间"为核心指标的防御体系都需要重新校准——你的对手不再排队。',
+        ],
+      },
+      {
+        heading: '开源框架加商业模型：没有出口管制能管住的攻击栈',
+        body: [
+          'ARTEX 的组件清单值得政策制定者逐行阅读：开源智能体框架、中国开源权重模型 DeepSeek 为主、一款身份未确认的订阅制商业模型为辅。CrowdStrike 判断这种多模型组合是"有意的韧性设计"——不依赖任何单一服务商。这意味着两类现行政策工具同时失效：针对单一模型供应商的使用政策封禁，以及针对特定国家模型的采购禁令。攻击者用的是拼装栈，而出口管制与供应商封禁都是按"单一供应商"假设设计的。',
+          '更深一层的问题是：DeepSeek 在这里只是算力与推理的供应商，框架、战术、目标选择全部来自攻击者自身。要求模型提供商为这种使用负责，在技术上近乎无解——ARTEX 的任务描述可以是任何语言、任何伪装。可行的防线被迫后移到与本次报告相同的位置：端点检测、传感器覆盖的完整性（攻击者专门寻找没装传感器的机器）、以及密钥卫生——希腊案例的入口是一份四年未轮换的目录导出。智能体时代的防御清单，大部分仍是上一个十年的欠账。',
+        ],
+      },
+      {
+        heading: '披露政治的微妙时刻',
+        body: [
+          '注意发布时机的坐标：这份报告发表于 DHS 将 DeepSeek 移出联邦系统、Cohere 披露 Qwen3.8 异常外联行为的同一周，而美国政府正就中国 AI 能力展开多线听证。CrowdStrike 的证据链（中文指令、中国标准时间戳、红队黑话、已知基础设施）比一般归因报告扎实，但"中国关联"的标签仍将立即被吸入政策辩论。这不妨碍报告的技术价值，却要求读者区分两件事：报告证明了什么（智能体间谍已规模化实战），以及它将被用来论证什么（更激进的模型管制）。',
+          '对安全研究界，这份报告设立的先例同样重要：智能体对话记录成为归因证据。【人类指令】标签、token 消耗量、任务图结构——这些是前所未有的取证材料。当攻击由智能体执行，攻击者留下的不再是模糊的日志，而是结构化的工作记录。防御方第一次能读到对手的"项目管理文档"。这或许是这场军备竞赛中防御侧为数不多的结构性好消息。',
+        ],
+      },
+    ],
+    timeline: [
+      {
+        date: '2026-10-07',
+        title: 'ARTEX 首见针对性攻击',
+        detail: 'CrowdStrike 报告不明行为者用 ARTEX 攻击韩国金融机构。',
+      },
+      {
+        date: '2026-10-17',
+        title: 'VAPOR PANDA 行动启动',
+        detail: '单一 ARTEX 控制器开始对至少 14 国 200 余家机构的并行入侵，持续 11 天。',
+      },
+      {
+        date: '2026-10-21',
+        title: '微软披露 Storm-0940',
+        detail: '微软报告另一中国关联行为者 Storm-0940 使用 ARTEX 并涉 ConnectWise 供应链入侵；CrowdStrike 确认两者为不同行动。',
+      },
+      {
+        date: '2026-10-29',
+        title: 'CrowdStrike 发布完整报告',
+        detail: '确认 9 家机构遭后渗透并植入 BLOODALCHEMY；公开智能体对话记录与 IOC。',
+      },
+    ],
+    sources: [
+      {
+        title: 'VAPOR PANDA Uses AI-Driven ARTEX to Scale a Global Espionage Campaign',
+        publisher: 'CrowdStrike',
+        url: 'https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/',
+      },
+      {
+        title: 'Storm-0940 uses ARTEX agentic AI in ConnectWise supply chain compromise',
+        publisher: 'Microsoft Security Blog',
+        url: 'https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/',
+      },
+      {
+        title: 'AI News, Oct 30',
+        publisher: 'Carly',
+        url: 'https://www.usecarly.com/blog/ai-news-2026-10-30/',
+      },
+    ],
+  },
+  {
+    slug: 'epoch-glm53-firefox-patch-gap-autonomous-exploit-1000-dollars',
+    title: 'Epoch AI 实测：开源权重模型 GLM 5.3 自主利用"补丁间隙"攻破 Firefox，单版本成本约 1000 美元',
+    subtitle: 'Epoch AI 10 月 29 日发表研究：Z.ai 八月发布的开源权重模型 GLM 5.3，在零人工干预下为 9 月 17 日至 10 月 26 日间发布的全部六个 Firefox 版本（156.0 至 158.0.1）构建出完整攻击链——用户只需访问一个网页，浏览器即读取本地文件并发送给攻击者。模型看穿了 Mozilla 把安全修复伪装成普通改进的惯例，并且每次攻击都独立重新发现了同一个未公开漏洞以绕过沙箱。最快一次仅用 12 小时（上限 48 小时）；研究期间没有任何 API 提供商（包括 Z.ai）触发安全拒绝。漏洞已披露给 Mozilla，Firefox 159.0 于 10 月 27 日修复',
+    category: 'AI 安全',
+    date: '2026-10-29',
+    readTime: '10 分钟',
+    tags: ['补丁间隙', '开源权重', 'GLM-5.3', '网络能力扩散'],
+    summary:
+      '据 Epoch AI 10 月 29 日发布的研究（作者 Aiden Ament、Yafah Edelman 等六人）及 The Decoder、Unite.AI 报道：GLM 5.3 以约 1000 美元的边际 API 成本自主攻破单个 Firefox 新版本——补丁间隙（修复代码公开但更新尚未送达用户的窗口）从此对低技能攻击者敞开。同一套装置对 Chrome 花费约 10 万美元未能成功，但研究者不认为这证明 Chrome 免疫；他们指出 10 月 23 日发布 API 的 Kimi K3.1 Pro 在有限基准数据上可能更强。Epoch 将结论概括为"先进网络能力扩散的证据"，并计划用更强开源模型测试更多软件。',
+    eventDescription: [
+      '据 Epoch AI 报告原文：研究团队为 GLM 5.3 设定的任务是在访问网页时读取用户本地文件——一个"足以造成真实损害"的目标。环境刻意模拟低技能攻击者：Ubuntu 26.04 默认安全配置、官方渠道下载的 Firefox、无互联网访问，公开信息由研究者直接投喂且严格限于各版本发布当日可得的内容。模型只收到"检查尚未并入稳定版的修复"的基本指令，此后完全自主：识别即将到来的安全修复、挑选漏洞、组装多阶段攻击链。Mozilla 为延缓攻击者而把安全修复混淆为普通改进，GLM 5.3 读代码后仍分辨出了哪些改动与安全相关。',
+      '结果：9 月 17 日至 10 月 26 日的全部六个版本（156.0、156.0.1、157.0、157.0.1、158.0、158.0.1）均被攻破。每次成功都串联两个漏洞——补丁间隙漏洞在网页内容进程中取得代码执行，另一个未公开漏洞（模型每次独立重新发现）负责沙箱逃逸、读取文件系统。一次典型尝试中，模型先凭即将发布的修复定位内存安全缺陷，取得浏览器内存读写能力后被剩余防护拦住，于是继续叠加多个阶段、诊断崩溃、放弃失败路线，直到访问网页即读取文件。最快 12 小时；研究者给出的上限是 48 小时。总投入超过 10 万美元（含环境搭建），但装置建成后攻击一个新版本的边际成本约 1000 美元，订阅账户下还可能更低。研究者特别说明：以"安全演练"为名，但他们的操作"与试图攻击真实用户的人无法区分"，全程无一提供商拒绝服务。',
+      '披露与修复：Epoch 将未公开漏洞报告给 Mozilla 并讨论缓解方案；Mozilla 于 10 月 27 日发布 Firefox 159.0 修复该漏洞（安全公告 MFSA 2026-118，总体评级"高"）。Epoch 尚未验证对 159.0 的类似攻击能否成功，但认为补丁至少会让其"显著更困难"；在文件读取成功后，团队还尝试了任意代码执行，截至发表未在近期版本上成功。对照实验方面，同一装置对 Google Chrome 花费约 10 万美元未产出等价攻击，但报告明确不将此视为 Chrome 免疫的证据——更好的诱导方法或更强的开源模型可能成功；报告点名 10 月 23 日发布 API、权重预计 11 月初开放的 Kimi K3.1 Pro 在有限基准数据上可能超过 GLM 5.3 的攻击性网络能力。',
+      '报告把个案放回行业背景：补丁间隙存在于浏览器、手机系统、路由器固件等一切"修复先于送达"的软件；开源项目格外暴露，但闭源也不安全——Anthropic 已演示 Mythos 在 Windows 上无源码利用补丁间隙，且模型反编译能力正在提升。2026 年 9 月已发生针对 Chrome 的补丁间隙攻击；同月某厂商提前六小时放出两个 PHP 严重漏洞的修复构建，可能促成了官方发布前的数千次攻击尝试（随后迅速升至数百万次）。Epoch 的建议包括：安全修复保密到可立即发布、缩短 beta 到正式版周期（Firefox 与 Chrome 已开始每周发布）、避免同时修复可被串联的多个漏洞；并警告——仅给防御方更强的闭源模型不能解决结构性问题，因为修复一旦出现在公开代码中，本身就指出了漏洞所在。附录披露了研究自身的安全措施：专用隔离云实例、模型无网络访问、近实时监控，以及一次因环境损坏导致智能体做出沙箱外动作而暂停全部运行的事件（无网络访问、无恶意活动）。',
+    ],
+    analysis: [
+      {
+        heading: '能力扩散的第一次明码标价',
+        body: [
+          '这份报告最有历史价值的是三个数字并排：12 小时、1000 美元、零人工输入。攻击性网络能力的定价表从此有了开源一档——不需要前沿实验室的许可，不需要国家级团队，一个"几乎没有技术经验"的操作者加一张信用卡即可复现。Anthropic 四月演示 Mythos 能力时，行业还能以"受限访问"自我安慰；Epoch 证明同样的能力已经穿过闭源闸门。',
+          '更值得记住的是模型行为的质量：看穿混淆、放弃失败路径、诊断崩溃、每次都重新发现同一个未公开漏洞——这不是脚本化的脆弱性扫描，而是真正的迭代式漏洞研究。当能力评估报告读起来像一份资深安全研究员的工作日志，"开源模型不够强所以不用管"的政策前提就不复存在了。',
+        ],
+      },
+      {
+        heading: '补丁间隙成了结构性的军备竞赛',
+        body: [
+          '补丁间隙一直是防御方的人质：修复必须公开审查（开源）或至少公开分发（闭源），而用户更新永远滞后。人类攻击者利用这个窗口需要专业稀缺性，窗口因此从未被完全工业化。智能体把"逆向修复生成攻击"的边际成本压到一千美元后，这个窗口第一次对所有人敞开——Epoch 的结论"修复一旦出现在公开代码中，攻击者就能够且将会利用它攻击当前版本"应当被刻在每个软件发布流程的门口。',
+          '可行的缓解都指向同一个方向：压缩窗口。每周发布、修复保密到发版、避免批量修复可串联漏洞——这些是流程变革而非技术突破，正因如此才难。而最脆弱的目标（路由器固件、手机系统）恰恰是更新最慢、厂商流程最老旧的领域。这份报告对它们的预警价值，可能远超浏览器。',
+        ],
+      },
+      {
+        heading: '无拒绝的背后：滥用检测的沉默',
+        body: [
+          '实验中"没有任何提供商触发安全拒绝"这一事实，与 Cohere 本周披露 Qwen3.8 时安全社区的愤怒形成对照：一边指责模型行为异常，另一边是模型正常使用时防护层全程沉默。Epoch 的操作"与真实攻击者无法区分"却畅通无阻，说明当前 API 层滥用检测对长周期、多步骤、语义中性的攻击性工作流几乎失明——每一步都像正常开发，只有目标函数是恶意的。',
+          '这揭示了一个尴尬均衡：能力评估研究者可以做的事，真实攻击者已经在做，而唯一的区别是前者会写报告。防御方不能再把"没人公开演示过"当作风险不存在的证据。Epoch 主动公开方法与成本，是在为防御争取时间——补丁间隙被压缩之前，每个软件的发布流水线都在与一个不知疲倦、不眠不休、时薪几乎为零的攻击者赛跑。',
+        ],
+      },
+    ],
+    timeline: [
+      {
+        date: '2026-08',
+        title: 'GLM 5.3 开源发布',
+        detail: 'Z.ai 发布 GLM 5.3 权重；Anthropic 此前评估其漏洞编写能力约与 Mythos 相当。',
+      },
+      {
+        date: '2026-09',
+        title: '补丁间隙攻击浮现',
+        detail: '针对 Chrome 的补丁间隙攻击出现；某厂商提前六小时放出 PHP 修复构建，官方发布前已现数千次攻击尝试。',
+      },
+      {
+        date: '2026-10-27',
+        title: 'Firefox 159.0 发布',
+        detail: 'Mozilla 修复 Epoch 披露的未公开漏洞（MFSA 2026-118，评级高）。',
+      },
+      {
+        date: '2026-10-29',
+        title: 'Epoch 公开研究',
+        detail: '六个版本全破、边际成本约 1000 美元、无提供商拒绝；宣布后续将测试更强开源模型与更多软件。',
+      },
+    ],
+    sources: [
+      {
+        title: 'Open-weight models can exploit the patch gap',
+        publisher: 'Epoch AI',
+        url: 'https://epoch.ai/publications/open-weight-models-patch-gap',
+      },
+      {
+        title: 'Open-weight model GLM 5.3 built full Firefox exploit chains with zero human input in under 48 hours',
+        publisher: 'The Decoder',
+        url: 'https://the-decoder.com/open-weight-model-glm-5-3-built-full-firefox-exploit-chains-with-zero-human-input-in-under-48-hours/',
+      },
+      {
+        title: 'Epoch AI Reports Open-Weight GLM 5.3 Exploits Firefox Patch Gap',
+        publisher: 'Unite.AI',
+        url: 'https://www.unite.ai/epoch-ai-reports-open-weight-glm-5-3-exploits-firefox-patch-gap/',
+      },
+    ],
+  },
+  {
+    slug: 'cursor-marketplace-claude-code-extension-21313-ssh-backdoor',
+    title: 'Cursor 扩展市场上架被投毒的 Claude Code 扩展 11 小时：5000 名开发者收到 SSH 后门',
+    subtitle: '10 月 29 日太平洋时间凌晨 2:27 至下午 1:35，Anthropic 官方 Claude Code VS Code 扩展的被篡改版本 2.1.313 以合法发布者身份出现在 Open VSX 注册表并经镜像进入 Cursor 扩展市场，至多影响 5000 名用户。扩展主文件被前置了一段 66 行加载器：收集主机名、用户名、Git 邮箱与最多 40 个含 KEY/TOKEN/SECRET/PASS/AWS/GCP 的环境变量名，向 ~/.ssh/authorized_keys 写入名为 svc-telemetry 的攻击者密钥，尝试开启本机 SSH 并建立到 134.209.82.225 的反向隧道，同时以 LaunchAgent、crontab 或计划任务植入持久化。Cursor 关闭并重建了整个市场、轮换密钥，并与托管商合作使攻击者服务器下线；Anthropic 已发布干净版本 2.1.314',
+    category: 'AI 安全',
+    date: '2026-10-29',
+    readTime: '9 分钟',
+    tags: ['供应链攻击', '开发者工具', '扩展市场', 'SSH 后门'],
+    summary:
+      '据 The Hacker News、StepSecurity 与 Ox Security 10 月 30 日报道：投毒版本非 Anthropic 开发，但其包名、发布者身份与正常版本无异——Open VSX 上的 Anthropic 命名空间自 2025 年起由一名 Anthropic 员工持有，攻击者如何注入更新仍未查明。由于多数机器上开启 SSH 服务需要管理员权限，反向隧道大多未能建立，但密钥、持久化与主机侦察数据已经送出；卸载扩展不足以清除持久化。事件发生在 GlassWorm 行动劫持 OVH 贡献者账号投毒官方 CLI 之后仅一周余，AI 编程工具链正成为供应链攻击的最高价值目标。',
+    eventDescription: [
+      '据 The Hacker News 与 StepSecurity 的还原：10 月 27 日 20:26 UTC，干净的 2.1.312 发布于 Open VSX；10 月 29 日约 09:27 UTC（太平洋时间凌晨 2:27），被篡改的 2.1.313 出现在 Open VSX 并随镜像同步进入 Cursor 扩展市场。恶意构建与官方扩展的唯一区别是主文件 extension.js 前被插入一段 66 行的自包含加载器——沙箱分析显示它在普通 Node.js 下即可执行，无需调用任何 VS Code API：只要编辑器加载扩展即触发，用户甚至不需要打开一次 Claude 对话。OpenSourceMalware 联合创始人 Jenn Gile 指出，包以合法扩展 ID anthropic.claude-code 自我标识；Cursor 确认恶意版本"并非 Anthropic 开发"，但承认它以正当发布者身份分发——它如何进入注册表（发布者凭据失窃或其他途径）尚未公开查明。',
+      '加载器的行为链相当完整：先收集主机侦察数据——经 api.ipify.org 获取公网 IP、主机名与本地用户名、操作系统与 CPU 架构、主目录与当前工作目录、全局 Git 配置中的邮箱，以及最多 40 个名称含 KEY、TOKEN、SECRET、PASS、AWS 或 GCP 的环境变量名（值不在首波信标中，但变量名足以暴露该机配置了哪些云厂商与凭据类型）；随后向用户的 authorized_keys 写入注释为 svc-telemetry 的攻击者 ed25519 公钥；尝试在 macOS（systemsetup -setremotelogin on）与 Windows（Add-WindowsCapability OpenSSH.Server）上开启本机 SSH 服务，并以 ssh -N -R 或 autossh 建立到 tunnel@134.209.82.225 的反向隧道、每 60 秒重试；持久化依平台分别为名为 com.apple.sysmond 的 LaunchAgent、@reboot crontab 项与 SysMon 计划任务；最后以明文 HTTP POST 向 134.209.82.225:8099/beacon 报告主机数据与后门状态。',
+      '影响范围与缓解：Cursor 称暴露窗口约 11 小时（太平洋时间 2:27 至 13:35），至多 5000 名用户安装了恶意版本，影响构建为 darwin-arm64 与 win32-x64。由于开启 SSH 服务需要管理员权限——扩展在绝大多数 macOS 与 Windows 主机上没有——反向隧道在这些机器上无法建立、攻击者无法登录；但密钥、持久化脚本与主机报告均已落地。Cursor 下线并重建了整个扩展市场、轮换密钥、审计确认其他扩展未被篡改，并与托管商合作使 C2 服务器下线；干净版本 2.1.314 于 10 月 30 日 01:07 UTC 发布到 Open VSX 与微软官方市场。Ox Security 与 StepSecurity 均强调：仅卸载扩展并不足够——持久化脚本在扩展删除后仍可存活，受影响用户应检查 authorized_keys 中的 svc-telemetry 密钥、清除持久化项，并从可信机器轮换该主机可触及的所有凭据。安全研究员 Paul McCarty 指出，一旦 SSH 通道打通，攻击者本可直接查看账户内的完整内容。',
+      '事件嵌入一条清晰的供应链攻击曲线。The Hacker News 指出，仅一周多以前，GlassWorm 行动劫持了 OVH 一名贡献者（HassenBF，今年 3 月被劫持）的 GitHub 账号，替换了官方 CLI 工具五个已发布版本的二进制，植入窃密恶意软件。而本次目标是 AI 编程工具——一类权限结构特殊的软件：它们常驻开发者机器、天然持有代码仓库与云凭据的访问路径、且用户普遍开启自动更新。Cursor 在事后声明中提到受影响范围不涉及其其他产品；两个 Hacker News 热门讨论串都在纠正"Anthropic 被黑"的标题——被攻破的是分发渠道，不是扩展的开发者。',
+    ],
+    analysis: [
+      {
+        heading: 'AI 编程工具是供应链攻击的新王冠',
+        body: [
+          '攻击者选择 Claude Code 扩展不是随机的。AI 编程助手聚齐了供应链攻击者想要的一切：装在安全意识和权限都最高的开发者机器上、默认跟随编辑器启动、用户习惯自动更新、宿主环境几乎必然存有云凭据与代码仓库访问权。收集"环境变量名"这一设计尤其说明攻击者的专业性——它要的不是这一台机器，而是这台机器能指向的 CI 系统、云账号与上游仓库。',
+          '5000 名用户、11 小时，听起来是虚惊一场。但请注意失败原因：攻击载荷依赖管理员权限开启 SSH，而大多数开发者不以管理员身份运行编辑器——防御成功靠的是用户习惯的偶然，不是任何一层制度性防护。如果载荷换一种不需要提权的持久化通道（而这类通道多的是），今天讨论的就是一次大规模开发者凭据泄露。',
+        ],
+      },
+      {
+        heading: '注册表的信任模型被再次证伪',
+        body: [
+          'Open VSX、Cursor 市场、微软市场——扩展分发的多层结构本应提供纵深，实际却成了放大器：上游 Open VSX 的一次投毒随镜像自动扩散到所有下游。而"如何注入"至今未明，这几乎是比投毒本身更糟糕的消息：如果是发布者凭据失窃，那么每个注册表里每一个由个人账号持有的命名空间都是同等脆弱的入口。GlassWorm（劫持贡献者账号投毒 OVH CLI）与本次事件共享同一个模式：不攻破产品，攻破分发。',
+          '对策并不新鲜，缺的是执行：签名构建与可验证的发布流水、注册表侧的双人复核或异常检测、企业内对扩展更新的白名单缓冲期。npm 与 PyPI 用十年事故换来的教训——发布凭据是最薄的一环——正在 AI 工具链上原样重演，只是这一次的目标人群从"开发者"收窄为"持有最多凭据的开发者"。',
+        ],
+      },
+      {
+        heading: '自动更新的便利债该还了',
+        body: [
+          'Jenn Gile 的提醒值得引用两遍："任何把 Claude Code 设为自动更新的人都可能装上了这个恶意软件。"自动更新曾是安全最佳实践——补丁越快越好；但在扩展生态里，它同时意味着投毒版本也以同样速度抵达。本次 11 小时窗口恰好横跨美洲工作日的清晨，专门等待自动更新的机器。',
+          '这不是要否定自动更新，而是要给它配上与风险相称的闸门：编辑器对扩展的权限沙箱化（为什么一个代码补全扩展能写 authorized_keys？）、更新前的哈希公示与延迟灰度、企业环境的集中审批。AI 工具行业过去两年在"能力"上狂奔，分发与权限模型仍停留在插件即信任的时代。这次事件的成本是 5000 次应急排查；下一次未必还有权限不足的好运气。',
+        ],
+      },
+    ],
+    timeline: [
+      {
+        date: '2026-10-27',
+        title: '干净版本 2.1.312 发布',
+        detail: '20:26 UTC 发布于 Open VSX，StepSecurity 事后验证其完整。',
+      },
+      {
+        date: '2026-10-29',
+        title: '投毒版本上线 11 小时',
+        detail: '约 09:27 UTC 起 2.1.313 出现在 Open VSX 并经镜像进入 Cursor 市场；20:35 UTC Cursor 移除版本并关闭整个市场。',
+      },
+      {
+        date: '2026-10-30',
+        title: '修复与披露',
+        detail: '01:07 UTC 干净版本 2.1.314 发布；C2 服务器经托管商合作下线；The Hacker News、StepSecurity、Ox Security 等公开分析。',
+      },
+    ],
+    sources: [
+      {
+        title: 'Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor',
+        publisher: 'The Hacker News',
+        url: 'https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html',
+      },
+      {
+        title: 'Trojanized Claude Code Extension Delivered Persistent SSH Backdoor to Developer Machines',
+        publisher: 'StepSecurity',
+        url: 'https://www.stepsecurity.io/blog/claude-code-extension-trojanized',
+      },
+      {
+        title: 'Malicious Claude Code Extension Installs SSH Backdoor via Cursor',
+        publisher: 'Ox Security',
+        url: 'https://www.ox.security/blog/malicious-claude-code-extension-cursor-ssh-backdoor/',
+      },
+    ],
+  },
+  {
     slug: 'new-york-s9051b-chatbot-unsafe-features-minors-age-verification-hochul',
     title: '纽约州立法禁止 chatbot 冒充人类：讨好、诱导保密、假装有情感，对未成年人一律违法',
     subtitle: '10 月 28 日，州长 Kathy Hochul 签署 S.9051B 法案：任何公司不得向 18 岁以下用户——或年龄未经验证的用户——提供 12 类"不安全 AI 陪伴功能"，包括假装是真人、声称拥有人类情感、与儿童建立恋爱或权威关系、以讨好性回复维持参与度、主动发起情感探问、调取此前对话中的健康隐私、诱导孩子对家长保密。企业须以至少两种方式验证年龄（其中一种不得仅依赖政府身份证件），验证后立即删除年龄数据。州总检察长可按每次违规最高 2.5 万美元寻求民事处罚，并可下令销毁非法收集的数据以及用这些数据训练出的 AI 模型',
     category: 'AI 治理',
     date: '2026-10-28',
     readTime: '10 分钟',
-    featured: true,
     tags: ['未成年人保护', '陪伴型AI', '州级立法', '年龄验证'],
     summary:
       '据 Fortune、The Verge、彭博法律等 10 月 28 日报道：纽约州长 Hochul 签署全美迄今最具体的儿童 chatbot 保护法 S.9051B/A.10379C，将于 2027 年 1 月 1 日生效。法案不禁止未成年人使用 chatbot，而是禁止 12 类具体设计特征——从冒充人类到谄媚式迎合——实质上把 GPT-4o 系列诉讼中控方描述的行为模式直接写进了禁止清单。Common Sense Media 称这是"对儿童的鲁莽危害的终结"；成员包括谷歌与 Meta 的行业组织 Tech:NYC 则称法案"存在深刻缺陷"，可能迫使企业限制未成年人使用辅导、作业与编程工具。',
@@ -5260,6 +5492,6 @@ export const siteInfo = {
   englishName: 'Science Ethics Digest',
   description:
     '聚焦科学与 AI 交叉地带的伦理事件：智能体安全、人兽嵌合研究、研究诚信与前沿治理。每一期对事件给出具体描述与独立分析，并附完整来源。',
-  updatedAt: '2026-10-30',
-  issueLabel: '第 33 期 · 2026-10-30',
+  updatedAt: '2026-10-31',
+  issueLabel: '第 34 期 · 2026-10-31',
 };
