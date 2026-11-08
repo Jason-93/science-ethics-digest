@@ -33,13 +33,275 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'public-first-63-million-10-of-17-wins-ai-safety-midterms-bloomberg',
+    title: '献金战清算：Public First 系投入超 6300 万美元，17 名背书候选人 10 人胜出',
+    subtitle: 'Bloomberg 11 月 7 日的选后统计显示：Anthropic 支持的安全护栏阵营 Public First 网络在 2026 年中期选举中总花费超过 6,300 万美元，其支持的 17 名国会候选人中 10 人胜选；Bloomberg 估算两阵营合计投入约 1.1 亿美元。Politico 11 月 6 日的复盘把转折点追溯到 2025 年 7 月 1 日参议院 99 比 1 否决冻结州级 AI 监管的优先权条款——安全阵营自此在 Signal 群聊中组织成型。对手阵营 Leading the Future 据 Wired 报道选后账上仅剩 2,000 万余美元，第二季度与第三季度捐款为零；其最大单笔投资——约 480 万美元支持 Darline Graham 角逐南卡罗来纳州联邦参议员——以失败告终',
+    category: 'AI 治理',
+    date: '2026-11-08',
+    readTime: '11 分钟',
+    featured: true,
+    tags: ['政治献金', '中期选举', 'Public First', 'Anthropic'],
+    summary:
+      '本刊此前两期追踪的 AI 献金三部曲迎来终章：10 月的 FEC 账面（7850 万美元、安全阵营反超）、11 月 3 日的选举结果（民主党拿下国会、SB 53 起草人进入众议院），到本周 Bloomberg 与 Politico 的选后清算——主张安全护栏的一方不仅钱花得更多，也确实买到了席位。加密货币剧本的 AI 版在第一个完整周期就分出了胜负，但胜率的分子与分母都来自阵营自己的名单。',
+    eventDescription: [
+      'Bloomberg 记者 Emily Birnbaum 11 月 7 日报道：Public First——由 Public First Action、Jobs and Democracy PAC 与 Defending Our Values PAC 组成的安全护栏阵营网络——在 2026 年中期选举周期总花费超过 6,300 万美元（引用该组织自报数字），其支持的 17 名国会候选人中 10 人胜选；Bloomberg 将这场两阵营合计约 1.1 亿美元的选战概括为"AI 安全倡导者取得进展"。Public First Action 在 11 月 4 日的选后声明中点名了两党胜者：加州第 11 选区的 Scott Wiener（SB 53 起草人，赢得佩洛西空出的席位，本刊上期报道）、科罗拉多第 8 选区的 Manny Rutinel（科罗拉多州 AI 法案发起人，击败共和党现任 Gabe Evans）、北卡第 4 选区的 Valerie Foushee（众议院民主党 AI 委员会联合主席，守住席位），以及共和党侧的 Celeste Maloy、Kevin Hern、Pete Ricketts 与 John Cowan；声明称三家机构的活动覆盖了至少 78 个选区与州。Carson 在声明中称，这一夜是"对 AI 行业反监管企图——花钱买下一个视而不见的国会——的粉碎性打击"。Anthropic 拒绝对 Bloomberg 置评。',
+      'Politico 11 月 6 日的长篇复盘《How Big Tech Lost the Midterms》追溯了安全阵营的组织起源：2025 年 7 月 1 日，参议院以 99 比 1 从预算法案中剔除了冻结各州 AI 监管十年的联邦优先权条款——这场表决把原本松散的科技政策老兵、消费者权益倡导者、有效利他主义者与宗教团体焊接成一个协作网络，其日常组织形态至今仍是 Signal 群聊。Public First 联合创始人 Brad Carson 对 Politico 表示，联盟"在那场斗争中凝聚，并一直维持到现在"。对手阵营 Leading the Future 于 2025 年 8 月成立，带着超过 1 亿美元的认捐，公开对标加密货币行业 Fairshake 的选举工程；联合负责人 Josh Vlasto 今年 7 月对 Politico 称，该组织是对"一家公司及其旧金山朋友们"的价值观与企业议程的"反作用力"——他指的是 Anthropic。',
+      'Politico 追溯的资金流向：Anthropic 公司账户 2 月与 7 月各向 Public First 的关联非营利组织注入 2,000 万美元——非营利架构不能直接资助候选人，公司称资金限定用于政策与公众教育；Inside Political Money 援引 Carson 的说法，Anthropic 的承诺合计 4,000 万美元。CEO Dario Amodei 5 月以个人名义捐出 100 万美元，这是他本选举周期首笔公开政治捐款；据 AI Weekly 对 Bloomberg 报道的梳理，Anthropic 员工个人合计另有约 500 万美元。一位民主党策略师向 Politico 描述这个金主网络：包括"大量 2022 年入职、如今身家过亿的 Anthropic 工程师"，且毫无公开露面的意愿。值得记录的时间细节：Carson 透露，直到 7 月 Anthropic 仍在考虑自建安全非营利组织与 PAC，最终才决定把钱交给盟友。',
+      '对手阵营的选后账目由 Wired 与 Semafor 拼出：Leading the Future 在初选阶段投入约 2,600 万美元独立支出，大选阶段仅约 1,000 万、且多花在安全席位；第二季度与第三季度捐款为零，选后账上剩 2,000 万余美元。其最昂贵的败仗在南卡罗来纳：Semafor 报道 Leading the Future 投入约 480 万美元支持 Darline Graham 角逐联邦参议员，她败给了民主党人 Annie Andrews——Andrews 阵营在选战中给她贴上 "Data Center Darline" 的标签；Wired 记载其得票率停在 46.5%，而该州自 1998 年以来未选出过民主党联邦参议员。口径警示必须写明：Bloomberg 的 6,300 万来自网络自报数，Semafor 的约 2,000 万只是单一大选分支的独立支出口径，两者不矛盾也不可互换；而"17 名候选人"这份名单的构成由阵营自己界定——78 个活动选区与 17 个背书对象衡量的是不同东西。Wired 另援引 NBC 出口民调：56% 的选民称 AI 与数据中心在他们的投票中起了重要作用。',
+    ],
+    analysis: [
+      {
+        heading: '胜率怎么算：分子分母都是阵营自己选的',
+        body: [
+          '10/17 是一个漂亮的数字，但它的分母值得审视：哪些候选人算"支持"，由 Public First 自己的背书名单界定，初选阶段的蜻蜓点水与大选阶段的重仓投入在名单上等价。同期对照是 Wired 对 Leading the Future 的判词——它赢下的多是安全席位，在竞争性选举里没有真正撬动指针。两个阵营都可以宣称部分胜利，恰恰说明超级 PAC 时代的胜率统计是叙事工具而非度量衡。',
+          '但即便把口径压到最保守，方向性结论仍然成立：花钱更多的一方拿下了叙事与多数关键战役，而失败集中在对方最昂贵的赌注上。南卡一役的象征意义尤其大——在深红州为一个被对手贴上数据中心标签的候选人烧掉 480 万仍败北，等于为 2028 周期的每一场初选标注了风险溢价。威慑从来不需要百发百中，只需要让目标相信代价真实存在。',
+        ],
+      },
+      {
+        heading: '一家公司的政治化：4,500 万美元与它买不到的防火墙',
+        body: [
+          'Anthropic 系资金（公司 4,000 万 + CEO 个人 100 万 + 员工约 500 万）构成了安全阵营账面的大头。公司坚称资金走非营利渠道、限定用于政策教育而非竞选广告——这个区分在法律上成立，在政治上几乎无效：选民不会区分"政策教育"与"候选人广告"，对手也不会。Carson 反复强调 Public First 不听命于 Anthropic，他自己另办了一家批评过 Anthropic 的监督组织——这种切割越努力，越说明"Anthropic 的 PAC"这个标签有多黏。',
+          '时机让一切更锋利：这家公司正站在 IPO 门口，10 月 26 日刚公开 94 页风险因素的 S-1 文件（本刊此前报道），两周后它的政治同盟赢下了一场全国选举。"被监管者同时是监管议程的最大金主"这个结构性事实，不会因为资金走 501(c)(4) 架构而变得不刺眼。Anthropic 买到了它主张的规则的立法窗口，也永久买下了"政治行为体"的身份——后者的价格不会出现在任何 FEC 报表里。',
+        ],
+      },
+      {
+        heading: '第二幕的三个观察点',
+        body: [
+          '献金的回报从来不以候选人感恩的形式兑现，而是以立法议程的形式。接下来值得盯住的三个信号：Wiener 与 Rutinel 的委员会分配——带着州法文本进国会的人坐进哪个委员会，决定 SB 53 模板联邦化的速度；联邦透明度法案起草时是否沿用 10^26 算力门槛与 15 天事件上报条款；以及 Leading the Future 的存续形态——账上还有 2,000 万、发言人已承诺运作到 2028，Wired 观察到它正从初选威慑转向讨好新科议员，这是资金效率更高的打法。',
+          '最深层的风险是党派化的固化。安全阵营本轮的胜利与民主党横扫绑定，联邦优先权议程的搁浅也由一党主导——如果 AI 监管彻底沦为两党站队议题，2028 年政权轮替之日就是所有立法成果的清算之时。Carson 自己在选后承认，更大的立法辩论才刚刚开始。献金三部曲落幕，真正的文本战才刚开场——而文本战的战场在委员会，不在广告里。',
+        ],
+      },
+    ],
+    timeline: [
+      {
+        date: '2025-07-01',
+        title: '参议院 99 比 1 否决优先权条款',
+        detail: '冻结各州 AI 监管十年的附加条款被从预算法案中剔除；安全阵营自此在 Signal 群聊中组织成型。',
+      },
+      {
+        date: '2025-08',
+        title: 'Leading the Future 成立',
+        detail: '认捐超 1 亿美元，对标加密货币行业 Fairshake 的选举工程；Vlasto 称其为"一家公司及其旧金山朋友们"的反作用力。',
+      },
+      {
+        date: '2026-02 至 07',
+        title: 'Anthropic 两笔 2,000 万',
+        detail: '公司账户 2 月与 7 月各向 Public First 关联非营利组织注入 2,000 万美元；5 月 Amodei 个人捐出 100 万，员工合计约 500 万。',
+      },
+      {
+        date: '2026-11-03',
+        title: '中期选举投票日',
+        detail: '民主党拿下国会；Public First 系活动覆盖至少 78 个选区与州；约 40 项限制数据中心的地方公投通过。',
+      },
+      {
+        date: '2026-11-07',
+        title: 'Bloomberg 选后清算',
+        detail: 'Public First 系总花费超 6,300 万美元、17 名背书候选人 10 人胜出；两阵营合计约 1.1 亿美元。',
+      },
+    ],
+    sources: [
+      {
+        title: 'Public First says it spent $63M+ backing pro-safeguards candidates; Bloomberg reports 10 of 17 won',
+        publisher: 'explainx',
+        url: 'https://explainx.ai/blog/public-first-pac-midterms-10-of-17-wins-63-million-anthropic-2026',
+      },
+      {
+        title: 'Anthropic-Backed Public First Spent $63M+ in Midterms, Flipped 10 of 17 AI-Safety Congressional Bets',
+        publisher: 'AI Weekly',
+        url: 'https://aiweekly.co/alerts/anthropic-backed-public-first-spent-63m-in-midterms-flipped-10-of-17-ai-safety',
+      },
+    ],
+  },
+  {
+    slug: 'ccw-review-conference-geneva-november-16-us-russia-block-autonomous-weapons-mandate',
+    title: '日内瓦前哨战：CCW 审议大会 16 日开幕，外交报道称美俄联手阻击自主武器条约授权',
+    subtitle: '《特定常规武器公约》（CCW）第七次审议大会定于 11 月 16 日至 20 日在日内瓦举行，将决定是否启动致命自主武器系统的条约谈判——十余年来该议题最接近实质突破的一次。但 11 月 6 日的外交报道显示，美国与俄罗斯主导的阵营正在动员阻击"有法律约束力条约"的谈判授权。此前 8 月 31 日至 9 月 4 日的政府专家组会议上，128 个缔约国经彻夜谈判以协商一致通过一份不具约束力的要素文件；Stop Killer Robots 统计 130 国支持有法律约束力的文书、163 国在联大第一委员会支持相关决议；联合国秘书长与红十字国际委员会主席 8 月 25 日联合警告："我们正危险地接近越过一条道德红线：机器自主瞄准人类"',
+    category: 'AI 治理',
+    date: '2026-11-07',
+    readTime: '10 分钟',
+    tags: ['致命自主武器', 'CCW', '日内瓦', '军控'],
+    summary:
+      '下周的日内瓦会议要表决的只是一个程序问题——是否启动谈判——但程序背后是该公约的结构性死结：协商一致规则意味着任何一个军事大国都能单独否决 130 国的多数意愿。如果授权受阻，军控阵营的备选路径是绕开 CCW，仿照《渥太华禁雷公约》的先例走独立外交进程。本期为前瞻报道，表决结果将在下期追踪。',
+    eventDescription: [
+      '《特定常规武器公约》第七次审议大会定于 11 月 16 日至 20 日在日内瓦举行，核心议程是决定是否就致命自主武器系统（LAWS）启动条约谈判。会前公布的授权提案设想是：就一项新议定书展开谈判，每年谈判 15 天，目标在 2028 年审议会议上提交议定书草案。这是 CCW 就"杀手机器人"问题谈判十余年、政府专家组（GGE）筹备讨论近三年后，第一次把"是否开谈"推到表决台上。',
+      '前情是 8 月 31 日至 9 月 4 日的 GGE 年内最后一轮会议：据 Dawn 报道，128 个缔约国经彻夜谈判、于 9 月 4 日凌晨以协商一致通过一份不具约束力的要素文件（编号 CCW/GGE.1/2026/3），为可能的谈判奠基。文件确认国际人道法适用、要求保持人类判断与控制、列出目标类型与时空限制等措施，并要求各国缓解"自动化偏见"——但不含任何禁令；其第 25 段给出的工作定义是"能够在没有操作人员干预的情况下识别、选择并打击目标、造成人员死亡"的武器与技术组件组合（EJIL: Talk! 的评注指出，这一定义把"系统范围"这个最尖锐的问题留给了未来的谈判）。Dawn 记录的分歧：美国与俄罗斯倾向国家指南而非有约束力的国际规则，美方还要求"人类判断"相关措辞保留弹性。Stop Killer Robots 指出，9 月 3 日的修订草案中伦理考量、可靠性、可预测性、可追溯性与可解释性等概念被删除，执行主任 Nicole van Rooijen 称"各国三年来的工作在最后一刻被实质性稀释"；该组织将删除归因于"少数军事化国家"，未点名。',
+      '11 月 6 日的外交报道（经 11 月 7 日更正的 PK Sharma 简报）显示：美俄主导的阵营正在动员，阻止审议大会给出有约束力条约的谈判授权。支持谈判一侧在过去三个月完成了集结：Stop Killer Robots 统计 130 国支持有法律约束力的文书、163 国在联大第一委员会支持相关决议；联合国秘书长古特雷斯与红十字国际委员会主席 Mirjana Spoljaric Egger 8 月 25 日发表联合呼吁，要求 11 月会议开启谈判，并明确主张禁止两类武器——结果不可预测的自主武器，与以人为目标的自主武器；古特雷斯的原话是"我们正危险地接近越过一条道德红线：机器自主瞄准人类"。教皇利奥十四世 10 月 30 日敦促成员国"采取切实步骤"（本刊此前报道）。',
+      '外交僵持的背景是战场现实的加速。经更正的简报记录：7 月 6 日一架俄罗斯 Molniya 攻击无人机击中扎波罗热一处加油站、三名平民死亡，《纽约时报》8 月 24 日调查（AeroTime 转述）称乌克兰调查人员发现该机在无无线电操控下飞行、用机载英伟达 Jetson Orin 模块选择瞄准点——受访专家称这可能是首例有据可查的 AI 控制无人机致平民死亡事件。简报同时记录了一个需要谨慎的反面案例：2 月 28 日美军空袭伊朗米纳卜一所小学造成超过 150 人死亡（含 120 名儿童），国际特赦组织 6 月声明称没有公开信息确认 AI 是否参与瞄准——该简报为此前的错误归因专门刊出更正。两个案例的并置本身就是对谈判各方的提醒：技术跑得比归因快，归因跑得比谈判快。',
+    ],
+    analysis: [
+      {
+        heading: '协商一致规则：最小公约数大国如何绑架多数',
+        body: [
+          'CCW 的决策规则是协商一致——每个缔约国都握有事实上的否决权。这套规则的设计初衷是让所有军事大国留在屋内，代价是屋内最保守的成员可以为整个屋子定调：130 国支持、163 国投赞成票，在协商一致规则下与两个国家的反对打平。9 月的谈判已经预演了这个结构：要素文件里所有带牙齿的措辞都在最后一夜被磨平，因为那是取得一致同意的唯一价格。',
+          '谈判授权之争因此是一场关于规则的元斗争：美俄阻击的不是某份条约文本——文本还不存在——而是"多数意愿可以转化为法律进程"这个先例本身。一旦授权开出，议题就从"是否"变成"如何"，定义、两用与核查（本刊此前分析的三大缺口）才会真正上桌。反过来看，军事大国愿意为一个程序问题投入政治资本，恰恰证明它们判断授权具有真实的约束倾向——否则不值得拦。',
+        ],
+      },
+      {
+        heading: '即便授权成功，也只是发令枪',
+        body: [
+          '需要校准预期：启动谈判不等于条约存在。会前公布的授权提案写的是每年 15 天谈判、2028 年审议会议产出议定书草案——这是一个以年计的过程，此后还要经历签署与批准，而主要军事大国完全可以全程不参与谈判、或在最后拒绝批准。要素文件里被删除的每一个概念——可预测性、可追溯性、伦理考量——都会在谈判桌上重新打一遍。',
+          '但历史站在"先启动再说"一边。国际人道法的几乎每一次进步都始于一个被嘲笑为象征性的程序步骤；1980 年 CCW 本身缔结时也被认为空洞，后来却成为集束弹药与杀伤人员地雷规范的孵化器。程序的价值不在产出文本的速度，而在把立场变成记录——每一次表决都是一次点名。',
+        ],
+      },
+      {
+        heading: '如果日内瓦失败：独立外交进程的先例已经写好',
+        body: [
+          'Stop Killer Robots 已经放话：如果 CCW 在 11 月不能同意开谈，希望保持"有意义的人类控制"的国家必须通过一个真正能采取行动的论坛启动谈判。这不是空话，而是有三次成功先例的成熟路径：1997 年《渥太华禁雷公约》绕开 CCW 的瘫痪、2008 年《集束弹药公约》绕开 CCW 僵局、2017 年《禁止核武器条约》由联合国谈判会议以 122 票通过——三次都是多数国家抛开协商一致机构单干。',
+          '独立进程的代价也写在历史里：三个条约的主要军事大国全部缺席，对战场的直接约束有限，但其规范塑造与污名化效应是真实的——地雷贸易在主要持有国未加入的情况下仍然萎缩。对自主武器，这条路径的问题更尖锐：当美俄都在把 AI 瞄准能力部署进现役装备，一个没有它们的条约约束的是谁？答案可能是：约束规范本身的存在感。下期本刊将报道 11 月 20 日闭幕时的表决结果——如果授权受阻，观察点将转向联大第一委员会是否在 12 月出现新的决议提案。',
+        ],
+      },
+    ],
+    timeline: [
+      {
+        date: '2026-07-06',
+        title: '扎波罗热无人机事件',
+        detail: '俄军 Molniya 无人机击中加油站致三名平民死亡；《纽约时报》调查称其机载 Jetson Orin 模块自主选择瞄准点。',
+      },
+      {
+        date: '2026-08-25',
+        title: '联合国与红十字会联合呼吁',
+        detail: '古特雷斯与 Spoljaric Egger 要求禁止不可预测与以人为目标的自主武器，敦促 11 月会议开启谈判。',
+      },
+      {
+        date: '2026-09-04',
+        title: 'GGE 要素文件通过',
+        detail: '128 个缔约国彻夜谈判后以协商一致通过不具约束力的要素文件；伦理与可预测性等概念在最后一夜被删除。',
+      },
+      {
+        date: '2026-10-30',
+        title: '教皇敦促"切实步骤"',
+        detail: '利奥十四世公开要求成员国在日内瓦迈出禁止致命自主武器的实质步骤（本刊此前报道）。',
+      },
+      {
+        date: '2026-11-06',
+        title: '外交报道：美俄动员阻击',
+        detail: '据外交报道，美俄主导阵营动员阻止谈判授权；相关简报次日刊出更正，修正战场归因细节。',
+      },
+      {
+        date: '2026-11-16',
+        title: '审议大会开幕',
+        detail: 'CCW 第七次审议大会在日内瓦举行（至 11 月 20 日），将决定是否启动条约谈判。',
+      },
+    ],
+    sources: [
+      {
+        title: '128 states reach agreement at autonomous weapons talks',
+        publisher: 'Dawn',
+        url: 'https://www.dawn.com/news/2027830',
+      },
+      {
+        title: 'UN chief, Red Cross renew call for rules on lethal autonomous weapons',
+        publisher: 'UN News',
+        url: 'https://news.un.org/en/story/2026/08/1168196',
+      },
+      {
+        title: 'Multilateral confrontation at the UN in Geneva',
+        publisher: 'pk-sharma.com',
+        url: 'https://www.pk-sharma.com/briefing/russia-us-block-un-autonomous-weapons-treaty-geneva',
+      },
+      {
+        title: 'Characterizing Lethal Autonomous Weapon Systems: Consensus without Agreement',
+        publisher: 'EJIL: Talk!',
+        url: 'https://www.ejiltalk.org/characterizing-lethal-autonomous-weapon-systems-consensus-without-agreement/',
+      },
+      {
+        title: 'Pope Leo XIV told UN states to take steps toward banning lethal autonomous weapons at the Geneva talks in November',
+        publisher: 'explainx',
+        url: 'https://explainx.ai/blog/pope-leo-xiv-disarm-ai-lethal-autonomous-weapons-un-geneva-november-machines-tools-not-persons-2026',
+      },
+    ],
+  },
+  {
+    slug: 'bloomington-ordinance-2026-29-superintelligence-ban-first-municipal-law',
+    title: '全美首部"超级智能禁令"：印第安纳州 Bloomington 市议会全票禁止 ASI 的分发与部署',
+    subtitle: '11 月 4 日，印第安纳州 Bloomington 市议会以 7 比 0 通过 Ordinance 2026-29，在市法典《治安与安全》篇新增第 14.25 章《禁止超级智能》——美国第一部直接以超级智能为规制对象的地方法。法令把递归自我改进、"在几乎所有认知任务上显著超越所有人类"的系统定性为公共安全妨害，禁止任何个人或公司在市境内分发与部署；管辖范围明确包括经本地浏览器、API、应用或联网硬件的远程使用——无论服务器物理位置在哪里。解禁条件苛刻到近乎永久：须同时满足科学界广泛共识加 99.9999%（"六个九"，借用核电站工程标准）灾难风险排除的确定性评估，以及全市登记选民超 95% 投票赞成',
+    category: 'AI 治理',
+    date: '2026-11-06',
+    readTime: '10 分钟',
+    tags: ['超级智能', '地方立法', 'Bloomington', '预防原则'],
+    summary:
+      '一座约 8 万人的大学城，用一部可执行性存疑、措辞却滴水不漏的法令，把"禁止超级智能"从倡议宣言写进了法典条文。它没有判定测试、没有执法预算、州法授权存疑——但全票通过本身就是交付物：发起人 Dave Rollo 明确希望约 350 个市镇照抄这份模板。与上周俄亥俄 18 个市镇否决数据中心同属一个谱系：地方正在联邦缺席的真空里各自为 AI 立法。',
+    eventDescription: [
+      '据 Indiana Daily Student 报道与法令原文：11 月 4 日晚，Bloomington 市议会在一场近五小时的会议中表决 Ordinance 2026-29，以 7 比 0 通过（副市长 Sydney Zulich 与议员 Kate Rosenbarger 缺席）。法令在市法典 Title 14《治安与安全》下新增 Chapter 14.25《禁止超级智能》，援引印第安纳州法典 § 36-1-3 的自治警察权，把不受监管的人工超级智能的存在宣布为公共安全妨害——随附备忘录直接把类比对象写为地方对危险物质的禁令。条文定义的超级智能是递归自我改进、在能动性、通用性与智能上全面超越人类的系统；禁令适用于任何个人或公司在市境内的分发与部署。',
+      '管辖条款是全文最激进的部分：第 14.25.030 条把"在市境内部署"界定为通过市内任何用户界面、浏览器、API 或联网硬件的本地激活或使用——无论底层服务器位于何处。也就是说，一名 Bloomington 居民在笔记本上调用一个托管在弗吉尼亚数据中心的模型，在法律文本上即构成市境内部署。执行手段为民事处罚、禁令救济与移送门罗县检方；B Square Bulletin 选前分析按该市一般罚则估算，持续性违规最高可计每日 2,500 美元，同时强调执法是裁量性的——法令不产生新增财政支出，也不要求警方主动巡查。市长 Kerry Thomson 有 20 天时间签署或否决。',
+      '日落与解禁条款揭示了立法者的真实预期。法令自称"临时公共安全边界"：一旦印第安纳州议会通过全面的超级智能安全框架，法令在 91 天后自动失效。但在州法缺席的情况下，解除禁令需要市议会同时认定两个条件：其一，科学界就超级智能可以安全、可控地开发达成广泛共识，且以概率风险评估证明达到 99.9999%——"六个九"——的工程确定性，备忘录称该标准借自核电站；其二，全市登记选民的 95% 以上投票赞成开发超级智能。B Square Bulletin 与 Praxen Policy 均指出硬伤口：州法可能并未授权城市举行此类公投；"登记选民的 95%"而非"投票者的 95%"在当代美国几乎不可达；而未来的市议会仍可通过普通立法程序直接废除整部法令。',
+      '这是发起人 Dave Rollo 三年里的第三次尝试：2023 年 7 月他提出的 AGI 暂停决议因印第安纳大学对研究经费的关切而撤回；2026 年 6 月，市议会全票通过 Resolution 2026-10，要求全体市政官员了解"人工智能带来的存在性风险"；10 月 14 日他附五页备忘录提交本法令，备忘录援引吹哨人辞职与媒体报道的模型失控事件作为紧迫性依据，并写道州与联邦政府都尚未为超级智能设立任何安全参数。倡议组织 Safe AI Forever Institute 在选后新闻稿中称该法令是供其他市镇采纳的实用模板；Rollo 的备忘录则直接把目标写为约 350 个类似城市的复制。explainx 的解读提醒读者以法令原文与 IDS 报道为准，倡议组织的转述不应作为法律依据。',
+    ],
+    analysis: [
+      {
+        heading: '象征性立法的真实功能：议程设置与模板输出',
+        body: [
+          '用可执行性的标准衡量，这部法令几乎没有牙齿：没有判定一个系统是否"超级智能"的测试，没有执法预算，对跨州服务的管辖权几乎必然遭遇宪法商业条款挑战，而且任何一届未来的市议会都能用简单多数废除它——95% 选民门槛约束的是"解除禁令"的认定程序，约束不了普通废除。但这不是缺陷，是设计：它的功能不是抓人，而是把"禁止超级智能"从请愿书语言变成可引用的法典编号。',
+          'Rollo 备忘录里"350 个市镇"的目标说明了一切。这与本刊上期报道的俄亥俄数据中心禁令同属一个谱系，但更深入一层：数据中心禁令管的是 AI 的物理基础设施，Bloomington 管的是 AI 的能力上限——地方立法正在同时向 AI 的身体与大脑开火。当联邦政府连续三年拿不出框架，"地方政府能不能做"就不再是宪法问题，而是政治事实：能做，而且做了。',
+        ],
+      },
+      {
+        heading: '"服务器在哪里"的旧梦与域外管辖的硬约束',
+        body: [
+          '14.25.030 条是对"互联网无边界"现实的一次法律宣战：部署的认定跟随用户的位置，而非服务器的位置。逻辑上这成立——正如欧盟 GDPR 的域外效力；但 GDPR 的杠杆是 4.5 亿人的市场准入，一个 8 万人城市没有这个杠杆。Anthropic 或 OpenAI 会不会为 Bloomington 单独部署地理封锁？几乎不会；法令的真正约束对象因此缩窄为本地机构——印第安纳大学的实验室、市政承包商、本地初创——恰恰是该市最没有动力惩罚的主体。',
+          '这暴露了地方 AI 立法的结构性悖论：管辖声索越宽，执行现实越窄，条文就越依赖供应商的自愿合规。而一旦供应商选择忽视，城市唯一的升级路径是诉讼——用市政法律预算对抗千亿级公司的法务部。B Square 的批评因此切中要害：法令没有逐条划分用户责任与分发者责任，留下的解释真空最终要由法院填写，而法院的答案可能是整部法令因越权而无效。',
+        ],
+      },
+      {
+        heading: '95% 门槛：预防原则的极致，也是民主程序的工具化',
+        body: [
+          '解禁双条款值得逐字审视。"六个九"借自核电工程，但核电站的堆芯熔毁概率建立在数十年故障树分析与运行数据之上；超级智能的"灾难风险"没有这门学科基础——今天没有任何科学共同体签得出这份 99.9999% 的证书，条件一在可预见的未来无法被满足。条件二则把终局决定交给一个设计上不可达的民主程序：美国地方选举的登记选民投票率常年在三到五成，95% 的登记选民赞成意味着比全票更稀有的政治事件。',
+          '两个条件合取，效果等于永久禁令——而这很可能就是立法者的意图：不是"安全了再解禁"，而是"永不信任"。预防原则的哲学地位可以辩论，但这里发生的程序转换值得警惕：一项本质上是技术判断的问题——系统是否安全——被永久移交给了政治程序，而政治程序被设计成永远给不出答案。如果这是模板，350 个市镇复制的将不是一项安全政策，而是一种把技术治理冻结为政治表态的方法。',
+        ],
+      },
+    ],
+    timeline: [
+      {
+        date: '2023-07',
+        title: '首次尝试撤回',
+        detail: 'Rollo 提出不具约束力的 AGI 暂停决议，因印第安纳大学对研究经费的关切而撤回。',
+      },
+      {
+        date: '2026-06',
+        title: 'Resolution 2026-10 全票通过',
+        detail: '市议会要求全体市政官员了解"人工智能带来的存在性风险"，为立法铺路。',
+      },
+      {
+        date: '2026-10-14',
+        title: 'Ordinance 2026-29 提交',
+        detail: '附五页备忘录，援引吹哨人辞职与媒体报道的模型失控事件；B Square Bulletin 此前一周刊出逐条分析。',
+      },
+      {
+        date: '2026-11-04',
+        title: '市议会 7 比 0 通过',
+        detail: '两人缺席；市法典新增第 14.25 章《禁止超级智能》。市长 Thomson 有 20 天签署窗口。',
+      },
+    ],
+    sources: [
+      {
+        title: 'Ordinance 2026-29: Prohibition of Superintelligence（法令原文与市议会备忘录 PDF）',
+        publisher: 'Bloomington Common Council / bloomdocs.org',
+        url: 'https://bloomdocs.org/wp-content/uploads/simple-file-list/2026-10-14-Bloomington-city-council-Ord-2026-29-Artificial-Intelligence-Rollo.pdf',
+      },
+      {
+        title: 'Bloomington city council bars superintelligent AI, dismisses removal of commission member',
+        publisher: 'Indiana Daily Student',
+        url: 'https://www.idsnews.com/article/2026/11/bloomington-city-council-ai-commission-member-removal-udo',
+      },
+      {
+        title: 'Bloomington’s city council voted 7–0 on Nov. 4, 2026 to ban superintelligent AI locally. Here is what Ordinance 2026-29 says and who it could hit',
+        publisher: 'explainx',
+        url: 'https://explainx.ai/blog/bloomington-indiana-superintelligence-ban-ordinance-2026-29-2026',
+      },
+      {
+        title: 'City of Bloomington Common Council Unanimously Passes Ordinance 2026-29 (7-0) to Ban Artificial Superintelligence (ASI)',
+        publisher: 'Safe AI Forever Institute（倡议组织新闻稿）',
+        url: 'https://safeaiforever.org/city-of-bloomington-common-council-unanimously-passes-ordinance-2026-29-7-0-to-ban-artificial-superintelligence-asi/',
+      },
+    ],
+  },
+  {
     slug: 'midterms-blue-wave-wiener-pelosi-seat-ohio-data-center-bans-ai-stocks-correction',
     title: '中期选举改写 AI 治理版图：SB 53 起草人 Wiener 进入国会，41 项地方数据中心公投 40 项倒向限制',
     subtitle: '11 月 3 日美国中期选举后，民主党拿下国会，AI 政策地图随之重绘：加州前沿 AI 法 SB 53 起草人 Scott Wiener 以约 55.5% 对 44.5% 赢得佩洛西退休空出的联邦众议院席位（对手 Connie Chan 11 月 4 日承认败选，计票未毕、数字均为初步），其竞选政纲包括设立文职主导的联邦 AI 安全监管机构；地方层面，Ballotpedia 统计当天 10 个州 41 项数据中心公投中 40 项由限制方胜出，俄亥俄 18 个市镇的 21 项表决几乎全部否决扩张；11 月 5 日 AI 基建股重挫，纳斯达克跌 3.9% 进入技术性回调，OpenAI 同日发布"国家社区契约"承诺自付全部电费、公开水噪数据、不与公职人员签保密协议',
     category: 'AI 治理',
     date: '2026-11-05',
     readTime: '12 分钟',
-    featured: true,
     tags: ['中期选举', '数据中心', 'SB 53', '联邦立法'],
     summary:
       '本刊上期记录的 7850 万美元 AI 政治献金有了下文：民主党在 11 月 3 日中期选举中拿下国会，前沿 AI 立法的象征人物进入众议院，地方选票几乎一边倒地反对数据中心扩张，资本市场当日用 3.9% 的跌幅为 AI 基建重新定价。监管派与加速派的资金战打完上半场，下半场转移到立法文本。',
@@ -5981,6 +6243,6 @@ export const siteInfo = {
   englishName: 'Science Ethics Digest',
   description:
     '聚焦科学与 AI 交叉地带的伦理事件：智能体安全、人兽嵌合研究、研究诚信与前沿治理。每一期对事件给出具体描述与独立分析，并附完整来源。',
-  updatedAt: '2026-11-08',
-  issueLabel: '第 36 期 · 2026-11-08',
+  updatedAt: '2026-11-09',
+  issueLabel: '第 37 期 · 2026-11-09',
 };
