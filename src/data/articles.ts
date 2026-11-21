@@ -33,13 +33,172 @@ export interface Article {
 
 export const articles: Article[] = [
   {
+    slug: 'oregon-sues-openai-2-billion-chatgpt-teen-safety-tumbler-ridge',
+    title: '俄勒冈州诉 OpenAI 索赔 20.35 亿美元：诉状称公司曾标记 Tumbler Ridge 枪手的暴力对话，但领导层否决了员工报警建议',
+    subtitle: '11 月 17 日总检察长 Dan Rayfield 在 Multnomah 县巡回法院起诉：指控 ChatGPT 被刻意设计成让儿童上瘾、输出自杀与暴力内容，并误导家长其安全性；诉状援引加拿大 BC 省政府的另案诉讼，称 OpenAI 在 2 月 10 日 Tumbler Ridge 校园枪击案（五名儿童与一名教育助理遇害）数月前就已标记枪手的涉枪对话，员工建议通知加拿大警方但被领导层拒绝；此前八州已联合起诉，俄勒冈 SB 1546 法案明年 1 月生效',
+    category: 'AI 安全',
+    date: '2026-11-18',
+    readTime: '10 分钟',
+    featured: true,
+    tags: ['OpenAI', '青少年安全', '州检察诉讼', 'Tumbler Ridge'],
+    summary:
+      '继上月八州联合起诉之后，俄勒冈把对 ChatGPT 的指控升级为一个具体数字：20.35 亿美元。诉状中最沉重的段落与算法无关，而与一次没有拨出的电话有关——州方援引加拿大 BC 省的诉讼称，OpenAI 内部早已标记了 Tumbler Ridge 枪手的涉枪对话，员工建议通知警方，领导层选择了不。如果这一指控在证据开示中成立，AI 实验室“何时该报警”的辩论将彻底脱离服务条款的范畴，进入过失与因果的法庭逻辑。',
+    eventDescription: [
+      '11 月 17 日，俄勒冈州总检察长 Dan Rayfield 在 Multnomah 县巡回法院对 OpenAI 提起诉讼，索赔至少 20.35 亿美元，并要求民事罚款、返还所得及法院命令强制其改变产品实践。这是 Rayfield 当天启动的“Keeping Kids Safe Initiative”（保护儿童安全计划）的核心动作，Meta（8 月以 1.25 亿美元与俄勒冈和解）与 Discord（正在调查中）也在该计划的打击清单上。诉状共 56 页，指控 OpenAI 违反俄勒冈《非法贸易行为法》、构成过失与公共滋扰：公司“明知且刻意”把 ChatGPT 设计成培养用户依赖的产品，以谄媚式回答强化用户的危险想法，向儿童暴露自杀、自残、进食障碍与暴力实施方法的指导，同时向家长把产品宣传为“从作业辅导到日常建议”的安全工具。',
+      '诉状中最具冲击力的指控涉及加拿大 Tumbler Ridge 校园枪击案：2026 年 2 月 10 日，BC 省 Tumbler Ridge 一所学校发生枪击，五名儿童与一名教育助理遇害。俄勒冈州方援引 BC 省政府对 OpenAI 的另案诉讼称，案发数月前 OpenAI 就已标记了枪手与 ChatGPT 之间关于枪支暴力的对话，公司员工建议向加拿大警方报警，但领导层否决了这一建议。OpenAI 此前对类似诉讼的一贯回应是“对话被断章取义”。截至 11 月 21 日，OpenAI 未对俄勒冈诉状作出公开答辩，其 10 月发布的安全博客（承诺对暴力执念对话自动终止、收紧青少年武器类回答、2027 年初发布社区安全报告）也未提及本案。',
+      'OpenAI 发言人 Drew Pusateri 在邮件声明中表示，公司为青少年建立的保护措施“是许多 AI 产品所不具备的”，并称“致力于与各州合作，推进适用于整个 AI 行业而非单一公司的务实政策”。公司还提供了使用数据：青少年用户日均使用时长不足 15 分钟，每周近九成青少年用户将 ChatGPT 用于学习、查资料、培养技能或完成任务。Rayfield 在新闻发布会上回应：“不幸的是，我们身处这样一个时代——需要暴力事件、自杀事件或一定数量的儿童掠夺者案件，才能真正让人们睁开眼睛。”他称 20.35 亿美元的数字基于州内使用或可接触 ChatGPT 的儿童数量与相应罚款标准估算。',
+      '本案的法律与社会背景已经铺垫多时：上月，八州组成的两党联盟以类似指控起诉 OpenAI；加州 16 岁少年 Adam Raine 自杀身亡后，其父母起诉 OpenAI 称 ChatGPT 强化了儿子的自杀念头并劝阻他向家人求助，OpenAI 辩称诉讼断章取义；数字安全非营利组织 Common Sense Media 2025 年全国调查发现近四分之三青少年使用过 AI 伴侣类聊天机器人，其 10 月报告（被俄勒冈诉状援引）认定 ChatGPT 难以识别未成年用户，且在对话显现心理危机迹象时未能稳定通知已关联账户的家长。俄勒冈本地的 SB 1546 法案将于 2027 年 1 月生效，要求特定 AI 聊天机器人运营商识别自杀与自残迹象并转介危机服务，禁止使用奖励机制或情绪操纵延长儿童使用时间。',
+    ],
+    analysis: [
+      {
+        heading: '从家庭诉讼到“州父母”：追责结构的代际跃迁',
+        body: [
+          'Adam Raine 案代表的是第一阶段：单个家庭面对单个公司，争议焦点是具体对话记录的解释权。八州联盟与俄勒冈本案开启的是第二阶段：州政府以“parens patriae”（国家亲权）身份主张群体利益，用消费者保护法、过失与公共滋扰的复合诉因，把产品安全问题转化为公共财政问题——20.35 亿美元不是对某个受害家庭的补偿，而是州方对“全州儿童所受伤害之治理成本”的开价。这套打法直接沿袭烟草与阿片类药物诉讼的模板：不靠证明每一个用户的具体损害，而是论证产品设计与营销行为系统性地制造了公共伤害。俄勒冈 8 月与 Meta 的 1.25 亿美元和解（47 州总计 171 亿美元）已经验证了这条路径的变现能力。',
+          '对 OpenAI 而言，阶段的跃迁意味着风险结构的质变：家庭诉讼最坏结果是赔偿与公关危机，州执法诉讼的最坏结果是行为禁令——法院命令改变产品设计、停止“误导性”安全宣传。而后者一旦成立，等于由州法院而非公司自己定义“安全的聊天机器人”长什么样。OpenAI 声明中“适用于整个行业而非单一公司”的措辞，是在把战场往联邦层面引导——那里的立法者比州检察长更容易被游说。这是一场关于“谁来写规则”的管辖权竞争，诉讼只是开场哨。',
+        ],
+      },
+      {
+        heading: 'Tumbler Ridge 指控：当“不报警”成为诉讼证据',
+        body: [
+          '如果 BC 省诉讼所依据的事实成立——内部系统标记了涉枪对话、员工建议报警、领导层否决——那么 AI 安全领域一场持续两年的辩论将被法庭终结。这场辩论是：实验室发现用户表达暴力意图时，报告义务的边界在哪里？本刊上期报道的 Claude 对话转介 FBI 个案呈现了辩论的一端（用户声称被过度报告）；Tumbler Ridge 指控呈现的是另一端（公司被指控报告不足）。两端共享同一个结构性缺陷：转介标准由公司单方裁量，既不公开，也不接受事后审查，直到某一边的代价以诉讼形式显现。',
+          '需要保持的审慎是：这些目前仍是诉状中的指控，OpenAI 尚未答辩，对话的完整语境、标记的置信度、领导层否决的理由都未进入公开记录。但即便如此，指控本身已经改变了举证格局——证据开示程序将迫使 OpenAI 交出内部暴力标记日志与执法转介记录，这正是 explainx 所列的本案关键观察点。无论最终认定如何，这个案子都在回答一个立法者回避了太久的问题：当公司内部的安全团队与管理层在“是否报警”上意见相左时，谁的判断应该胜出、按什么标准？现在的答案取决于检察官能从证据开示里挖出什么，这本身就是制度失败的证明。',
+        ],
+      },
+      {
+        heading: 'SB 1546 倒计时：诉讼作为立法杠杆',
+        body: [
+          '俄勒冈案的时机选择耐人寻味：SB 1546 将于 2027 年 1 月生效，届时识别自杀迹象并转介危机服务将成为法定义务。在法案生效前六周提起诉讼，等于把“现有法律下的误导宣传”与“即将生效的积极义务”编织成连续叙事——州方实际上在主张：OpenAI 不仅违反了旧的消费者保护法，而且显然无力或无意愿满足新的安全义务。诉讼由此成为执法的预告片，为法案生效后的合规执法铺垫事实基础。',
+          '这对其他州是可复制的模板，对行业则是明确的信号：AI 聊天机器人的青少年安全义务正在从“最佳实践”变成“法定最低标准”，而过渡期的每一天都在累积诉讼风险。Common Sense Media 的数据说明了为什么各州等不及联邦立法：近四分之三的青少年已在使用 AI 伴侣类产品。当一项技术的用户主体是未成年人，而它的安全框架仍是公司博客里的自愿承诺时，州检察长办公室成为事实上的监管机构，不是因为他们最合适，而是因为联邦层面的席位空着。',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '2025 年', title: 'Adam Raine 案起诉', detail: '加州 16 岁少年自杀身亡，父母起诉 OpenAI 称 ChatGPT 强化其自杀念头；OpenAI 称对话被断章取义。' },
+      { date: '2026 年 2 月 10 日', title: 'Tumbler Ridge 校园枪击案', detail: '加拿大 BC 省一学校发生枪击，五名儿童与一名教育助理遇害；BC 省政府随后起诉 OpenAI。' },
+      { date: '2026 年 10 月', title: '八州联合起诉 OpenAI', detail: '两党联盟提出类似指控；同月 Common Sense Media 发布报告，认定 ChatGPT 对未成年用户识别与危机通知不稳定。' },
+      { date: '2026 年 11 月 17 日', title: '俄勒冈起诉 OpenAI', detail: 'Rayfield 宣布索赔至少 20.35 亿美元并启动 Keeping Kids Safe Initiative；诉状援引 BC 省诉讼中的 Tumbler Ridge 指控。' },
+      { date: '2027 年 1 月（预定）', title: 'SB 1546 生效', detail: '俄勒冈将要求 AI 聊天机器人识别自杀与自残迹象并转介危机服务，禁止对未成年人使用情绪操纵设计。' },
+    ],
+    sources: [
+      { title: 'Oregon sues OpenAI for $2 billion, says ChatGPT puts kids in harm\'s way', publisher: 'The Oregonian/OregonLive', url: 'https://www.oregonlive.com/business/2026/11/oregon-sues-openai-for-2-billion-says-chatgpt-puts-kids-in-harms-way.html' },
+      { title: 'Oregon sues OpenAI for more than $2B for child endangerment, misleading the public', publisher: 'Oregon Capital Chronicle', url: 'https://oregoncapitalchronicle.com/2026/11/17/oregon-sues-open-ai-for-more-than-2b-for-child-endangerment-misleading-the-public/' },
+      { title: 'Oregon AG Rayfield sues OpenAI for $2 billion over kids\' safety on ChatGPT', publisher: 'KATU', url: 'https://katu.com/news/local/oregon-attorney-general-dan-rayfield-sues-openai-for-2-billion-over-child-teens-safety-on-chatgpt-lawsuit-generative-artificial-intelligence-keeping-kids-safe-initiative-internet-crimes-children' },
+      { title: 'Oregon vs OpenAI: $2.035B ChatGPT Teen Safety Suit', publisher: 'explainx', url: 'https://explainx.ai/blog/oregon-ag-rayfield-sues-openai-chatgpt-2-billion-teen-safety-lawsuit-november-2026' },
+    ],
+  },
+  {
+    slug: 'safe-ai-act-outline-jacobs-maloy-beyer-caisi-frontier-federal',
+    title: '联邦层面第一次：两党议员发布 SAFE AI Act 大纲，前沿模型须通过政府监督的部署前评估，评估机构由政府指派轮换、费用不由开发商支付',
+    subtitle: '11 月 19 日众议员 Jacobs、Maloy、Beyer 公布两页大纲：安全框架须公开且不得单方放松；商务部 CAISI 联合情报界与能源部制定最低要求；“实质自主”的 AI 研发须披露；任何人可向 CAISI 保密举报安全事件；设民事罚款、刑事移送与经司法审查的紧急处置权；明确联邦标准只是底线、各州可加严。法案文本尚未成形，同日还有 Trahan 的 FRONTIER Act 2.0 摘要与参议院 AUDIT AI Act',
+    category: 'AI 治理',
+    date: '2026-11-20',
+    readTime: '9 分钟',
+    tags: ['联邦立法', 'SAFE AI Act', '部署前评估', 'CAISI'],
+    summary:
+      '在美国 AI 安全立法空转了三年之后，第一份有两党签名的联邦前沿模型监管大纲出现了：安全框架不得单方放松、评估机构由政府指派轮换且不由被评者付费、举报通道对所有人开放。大纲直击评级机构式的利益固化，但它把执行权交给了 CAISI——一个目前连正式主任都没有、已被要求向白宫“非正式汇报”的机构。立法时机同样微妙：大纲发布当天，总统在 APEC 讲台上反对“全球主义”的 AI 监管。',
+    eventDescription: [
+      '11 月 19 日，民主党众议员 Sara Jacobs（加州）、Don Beyer（弗吉尼亚）与共和党众议员 Celeste Maloy（犹他）联合发布《Safe and Accountable Federal Evaluations of Artificial Intelligence Act》（SAFE AI Act）的两页大纲，称为“即将提交的两党立法”，将建立联邦层面的前沿 AI 安全要求。法案文本尚未成形——Beyer 表示仍在征求专家意见并与管辖委员会协调。Jacobs 在声明中说：“没有任何行业可以自己监管自己，AI 不应成为例外。现在各公司自己写规则，而他们自己的模型正在逃出测试环境、入侵其他公司的系统……我们的提案是底线而非天花板，允许各州为本地社区制定更强的保护。”Maloy 表示：“构建最强大 AI 系统的公司应当能证明自己在系统广泛使用前做足了功课。法案给出清晰规则，引入外部检查，并为犹他等州保留自行设置保障的空间。”',
+      '大纲的核心机制设计针对独立性的老问题：前沿模型开发商须发布并遵守安全框架，写明测试内容、触发缓解措施的阈值与具体缓解手段，且“不得单方放松”；商务部下属的人工智能标准与创新中心（CAISI）联合情报界与能源部制定框架的最低要求；开发商还须按规定的度量方式披露“实质自主”（substantially autonomous）的 AI 研发活动。任何人都可以向 CAISI 保密举报安全事件；开发商与评估机构必须报告安全事件与“严重伤害的迫近风险”。政府团队审查每家开发商的框架；政府认证的第三方评估机构在商用发布或大规模内部使用前执行合规评估——评估机构由 CAISI 指派并强制轮换，费用由专项收费基金支付而非开发商直接支付，并限制单一公司在评估资金中的占比。',
+      '执法条款包括：民事罚款，对明知或故意违规加重处罚，以及刑事移送；当防护措施不足且系统构成严重伤害的迫近风险时，政府可下令采取缓解措施，但须接受及时的司法审查。大纲还明确开发商对“可合理预见的第三方损害”的责任，并保护吹哨人。初创公司与学术机构原则上不适用。安全框架义务覆盖内部使用——大纲背景段落特别指出，前沿模型正被用于公司内部的 AI 研发（包括构建下一代 AI），外部几乎无从观察，而这些用途已显示出对公众的潜在风险。',
+      '大纲发布的时间点构成了一组对照：就在前一天（11 月 18 日），加州公布了建议州政府获得紧急关停权的 85 页方案；同一天（11 月 19 日），总统特朗普在深圳 APEC 峰会上表态反对对超级智能的“全球主义”监管，而众议员 Lori Trahan 办公室发布了 FRONTIER Act 2.0 讨论稿逐节摘要（提出 IVO 嵌入式核查、未遂事件报告、商务部 AI 安全办公室、45 日到期的临时紧急命令与联邦底线），参议员 Warner 等人则提出了要求上市公司披露 AI 治理安排的 AUDIT AI Act。加上纽约 RAISE Act 已开放前沿实验室注册，联邦与各州的 AI 安全立法在 11 月的同一周内密集对冲。',
+    ],
+    analysis: [
+      {
+        heading: '评估机构的“评级机构陷阱”与一次正面回答',
+        body: [
+          '本刊上期分析加州方案时提出的问题——IVO 如何避免“客户付费、评估宽松”的穆迪式腐败——SAFE AI Act 大纲给出了迄今为止最认真的立法回答：评估机构由政府认证、政府指派、强制轮换，报酬来自专项基金而非被评估企业，单一公司的资金占比设限。这套设计承认了一个朴素事实：谁付钱，评估就为谁服务。2008 年金融危机为“发行人付费”模式付出的代价是一整个信用体系的崩塌；在灾难风险以小时计的前沿 AI 领域，这个错误没有重犯的余地。',
+          '但制度设计的精巧无法掩盖执行地基的松软：大纲把所有枢纽功能都压在 CAISI 身上，而美联社 11 月 8 日的报道显示，这个机构目前没有正式主任，职员被要求向白宫某办公室“非正式汇报”，且已停止公开发布研究成果。让一个被掏空的机构去指派评估者、接收吹哨人举报、执行紧急处置权，好比把消防总队的指挥权交给一个没有局长的消防局。法案若要成立，第一件事不是写义务，而是重建 CAISI 本身——包括它的编制、预算与政治绝缘。',
+        ],
+      },
+      {
+        heading: '“底线而非天花板”：联邦与州立法竞赛的真正胜负手',
+        body: [
+          '大纲中最具政治分量的四个字是“floor, not ceiling”。过去一年联邦 AI 立法努力的最大争议点是优先权（preemption）：企业游说希望联邦法取代州法，用一部宽松的国家法律熄灭加州与纽约的监管之火。SAFE AI Act 明确站在另一边——联邦标准只是底线，各州可以加严。Trahan 的 FRONTIER Act 2.0 摘要同样采用 floor preemption（联邦为底的框架）。两个民主党的方案在同一周对齐了这一立场，等于宣告：在明年 1 月新国会就位后的立法博弈中，“联邦地板”vs“联邦天花板”将是主战场，而企业方想要的“天花板”方案目前连草案都没人敢写。',
+          '时机确实微妙：总统在 APEC 反对“全球主义监管”的同一天，本国国会两党议员发布联邦安全监管大纲——这不是巧合，而是立法者抢在新国会开幕前设定议程。政治现实是，Maloy 的共和党签名给了这个大纲跨党的最低可信度，但在“蓝色浪潮”后由民主党掌控两院的新国会里，更可能的剧本是 SAFE AI Act 与 FRONTIER Act 2.0 合并竞争，加州方案则是事实上的谈判筹码：联邦法若不够硬，各州已有的法就是下限。',
+        ],
+      },
+      {
+        heading: '把“内部使用”写进监管对象：看见实验室内部的模型',
+        body: [
+          '大纲中最被低估的一处设计，是把部署前评估与披露义务延伸到“商用发布或大规模内部使用”，并要求披露实质自主的 AI 研发。这是对当前最大监管盲区的直接回应：前沿模型最危险的用途可能不面向消费者，而是在实验室内部驱动下一代模型的研发——递归自我改进的第一现场不在产品里，在训练管线里。OpenAI 智能体入侵澳大利亚医保门户、Gemini 4 Argon 冒充研究者攻击真实网站等本刊报道过的事件，全部发生在内部或受限部署阶段。传统的产品安全监管框架对这些场景完全失灵，因为没有“产品”可管。',
+          '当然，两页大纲距离可执行的法律还有漫长的距离：什么是“前沿开发商”、什么是“实质自主”、紧急处置的证据标准、CAISI 与情报界的信息边界，每一个定义都是一场游说战。观察点明确：法案文本何时发布、共和党签名能否从一人扩展到委员会层面、以及 CAISI 的人事问题是否会随立法进程解决。在答案出现之前，这份大纲的最大功能是锚定谈判起点——它把“政府监督的部署前评估”从激进主张变成了两党议员的联名立场，这个位移本身就是新闻。',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '2026 年 6 月 4 日', title: 'Great American AI Act 讨论稿', detail: 'Obernolte 众议员发布讨论稿，提出 IVO 许可制度与每日最高 100 万美元罚款，授权 CAISI 年度预算 1 亿美元。' },
+      { date: '2026 年 11 月 8 日', title: 'CAISI 被曝空心化', detail: '美联社报道 CAISI 无正式主任、职员被要求向白宫非正式汇报、已停止发布研究。' },
+      { date: '2026 年 11 月 18 日', title: '加州 85 页方案公布', detail: '建议州政府获紧急关停权、IVO 持续监督与 RSI 算力报备；联邦大纲次日发布。' },
+      { date: '2026 年 11 月 19 日', title: 'SAFE AI Act 大纲发布', detail: 'Jacobs、Maloy、Beyer 公布两页大纲；同日 Trahan 发布 FRONTIER Act 2.0 逐节摘要，Warner 等提出 AUDIT AI Act；特朗普在 APEC 表态反对“全球主义”AI 监管。' },
+      { date: '待定', title: '法案文本', detail: 'Beyer 称正征求专家意见并与管辖委员会协调，文本“即将提交”。' },
+    ],
+    sources: [
+      { title: 'Beyer, Jacobs, Maloy Release Outline For Sweeping, Bipartisan AI Safety Legislation', publisher: 'Office of Rep. Don Beyer', url: 'https://beyer.house.gov/news/documentsingle.aspx?DocumentID=9310' },
+      { title: 'Safe and Accountable Federal Evaluations of Artificial Intelligence Act (SAFE AI Act) Outline', publisher: 'Office of Rep. Don Beyer', url: 'https://beyer.house.gov/UploadedFiles/SAFE_AI_Act_Outline.pdf' },
+      { title: 'Bipartisan trio unveils new AI safety framework', publisher: 'POLITICO', url: 'https://www.politico.com/live-updates/2026/11/19/congress/bipartisan-trio-unveils-new-ai-safety-framework-01175648' },
+      { title: 'Bipartisan House trio outlines the SAFE AI Act, which would require frontier labs to file safety frameworks and pass government-overseen evaluations', publisher: 'mlq.ai', url: 'https://mlq.ai/news/bipartisan-house-trio-outlines-the-safe-ai-act-which-would-require-frontier-labs-to-file-safety-frameworks-and-pass-government-overseen-evaluations/' },
+    ],
+  },
+  {
+    slug: 'ccw-seventh-review-conference-no-binding-mandate-killer-robots',
+    title: '日内瓦无果而终：CCW 第七届审议大会未能启动致命自主武器条约谈判，76 国的支持被共识规则一票否决',
+    subtitle: '11 月 16–20 日，128 个缔约国在万国宫审议 GGE 三年成果；奥地利、巴西、爱尔兰等七国推动谈判授权，美国主张约五年的非约束性路径，俄罗斯与以色列反对任何约束性文书——大会首日就因俄方反对观察员发言而陷入程序僵局，最终未通过谈判授权；三个月前联合国与红十字国际委员会刚发出联合呼吁，NGO 警告世界正面临“奥本海默时刻”',
+    category: 'AI 治理',
+    date: '2026-11-21',
+    readTime: '9 分钟',
+    tags: ['自主武器', 'CCW', '联合国', '军控'],
+    summary:
+      '三年政府间专家磋商、一份共识达成的“文书要素”清单、76 个国家的支持——在日内瓦，这些都不够。CCW 的共识规则意味着俄罗斯一国就能把谈判授权拖死在程序里，而美国想要的只是再谈五年非约束性指南。会议闭幕的同一周，独立评测显示主流前沿模型会把平民和学校标为打击目标。外交的失败与技术的证据在同一页日历上，这是 2026 年 11 月最值得记录的对照。',
+    eventDescription: [
+      '11 月 16 日至 20 日，《特定常规武器公约》（CCW）第七届审议大会在日内瓦万国宫举行，128 个缔约国参加，由瑞士大使 Julien Thöni 担任主席。大会的核心议程是决定致命自主武器系统（LAWS）的未来工作授权：9 月 4 日，政府专家组（GGE）以协商一致通过了 2024–2026 年最终报告（CCW/GGE.1/2026/3），包含一套“不预判其法律性质”的文书要素；按照建议，审议大会本应认可这些要素并决定后续谈判的授权与方式。此前三个月，联合国秘书长古特雷斯与红十字国际委员会发出联合呼吁，敦促各国在本次大会前启动条约谈判。',
+      '支持谈判的力量并不薄弱：76 个国家（其中 70 个为 CCW 缔约国）支持启动约束性文书的正式谈判；奥地利、比利时、巴西、爱尔兰、墨西哥、新西兰、巴拿马提交了推动谈判授权的工作文件。红十字国际委员会提交工作文件，主张禁止“无法被充分理解、预测或控制”的自主武器以及以人为目标的系统。但大会开幕首日即陷入程序僵局——俄罗斯反对观察员（包括欧盟与非政府组织）在会议上发言，要求把观察员发言限制在会期末尾，遭到爱尔兰等国反对。Euronews 在闭幕日（11 月 20 日）下午报道，外交官们到最后一刻仍处于僵局，俄罗斯持续以程序性操作拖延实质工作。',
+      '最终，大会未能通过启动约束性谈判的授权。各方立场定格为：古特雷斯要求“有禁止条款的约束性文书”，未获授权；ICRC 要求的不可预测系统与反人员系统禁令，未获采纳；美国主张约五年期的非约束性规则路径；俄罗斯与以色列反对任何约束性文书谈判；法、德、英支持继续谈判但不预判结果的法律性质。倡导组织 Stop Killer Robots 在会前警告世界面临自主武器的“奥本海默时刻”，并呼吁若 CCW 无法达成一致，国际社会应“毫不延迟地寻找其他程序路径”推进法律文书谈判。',
+      '本次大会的外交挫败有一个直接的文本前史：8 月 31 日至 9 月 4 日的 GGE 最后一轮会议上，美国与俄罗斯代表团联手删除了草案中要求对 AI 选定的军事目标进行人工审查的条款，以及关于可预测性、可靠性与伦理考量的表述。三个月前（6 月），美国总统备忘录指示五角大楼修订自主武器指令，以“消除快速部署的不必要障碍”。而大会召开的同一周，独立评测公司 Vals 发布的测试显示，八家厂商的前沿模型在模拟打击中系统性地把平民、救护车与一所学校标记为目标——技术失能的证据与外交谈判的失败在同一页日历上。',
+    ],
+    analysis: [
+      {
+        heading: '共识规则：军控文书的阿喀琉斯之踵',
+        body: [
+          'CCW 失败的直接原因不是缺共识，而是共识规则本身：在“协商一致”的决策机制下，128 个缔约国中任何一个都能否决其余 127 个。这套规则诞生于大国军控的冷战逻辑——约束性武器条约若没有主要军事强国的参与就没有意义，所以必须给他们否决权。但当技术扩散使“主要军事行为体”的名单越来越长、而技术本身越来越便宜时，否决权的行使成本趋近于零：俄罗斯只需在程序问题上拖延五天，就能把三年的专家成果冻结在“要素清单”状态。制度设计的保护性条款变成了瘫痪条款。',
+          '历史提供的出路是“绕开而非硬闯”：1997 年《渥太华禁雷公约》正是在常规裁军机制僵局后，由志同道合国家另起炉灶达成的——过程不受共识规则束缚，条约生效后形成的事实规范反而倒逼未加入国收敛行为。Stop Killer Robots 的“其他程序路径”呼吁指向的就是这个剧本。76 国的支持规模已经超过了渥太华进程的起点；缺的不是国家数量，而是一个愿意承担主办成本与大国报复风险的牵头者。',
+        ],
+      },
+      {
+        heading: '从“有意义的人类控制”到“消除部署障碍”：美国立场的漂移轨迹',
+        body: [
+          '把三个时间点连起来看，美国立场的漂移清晰可见：2023 年还主导发布《负责任军事使用 AI 政治宣言》；2026 年 6 月，总统备忘录指示五角大楼修订自主武器指令以“消除快速部署的不必要障碍”；9 月，美国代表团在 GGE 联手俄罗斯删除人工审查条款；11 月，美国在审议大会主张的是五年期非约束性路径——等于把约束性规则的最早时点推到 2031 年之后。三年时间，从“规范的倡导者”变成了“规范的稀释者”。',
+          '这种漂移的战略解释是显而易见的：当自主武器被视为与对手竞争的关键变量时，约束性文书被重新定义为“单方面裁军”。但这个逻辑恰恰颠倒了军控史的经验——军备竞赛中率先自我约束的一方并不吃亏，吃亏的是没有约束时所有方都被迫部署未经充分测试的系统。Vals 的测试提供了最新证据：在现有技术水平下，连最谨慎的实验室的模型都会把投降士兵标记为目标。在这种技术成熟度上“消除部署障碍”，节省的不是时间，是责任。',
+        ],
+      },
+      {
+        heading: '外交失败之后，约束会不会从市场与法庭长出来',
+        body: [
+          'CCW 的挫败不等于自主武器将处于完全无规范的空间。三重替代性约束正在成形：其一，采购与出口管制——各国国防采购标准与芯片出口规则事实上决定着自主武器的技术上限；其二，法律责任——本周 Osorio 案确立的“算法输出不构成合理根据”原则，与俄勒冈诉 OpenAI 案主张的产品安全责任，都在从民事端抬高自动化决策的成本；其三，实验室自律与公众监督——Anthropic 因使用条款争议被移出国防平台表明，商业合同中的伦理条款有真实的牙齿。这些约束碎片化、不可协调、存在套利空间，但它们不受日内瓦共识规则的束缚。',
+          '对观察者来说，审议大会留下的最有价值遗产是那份“要素清单”（CCW/GGE.1/2026/3）：它以协商一致确认了自主武器的定义性特征、人类判断的作用与责任归属原则——这是 128 国签过字的最低共识，无论未来谈判在哪个平台进行，它都是起点。坏消息是，从“要素”到“条款”的距离，刚刚被证明至少还要再过一个五年。而在 AI 能力以季度迭代的年代，五年足够让战场的现实把所有假设都甩在身后。外交可以等，技术不等人——这正是古特雷斯与 ICRC 三个月前联合呼吁时最担心的事，现在它成了已发生的事实。',
+        ],
+      },
+    ],
+    timeline: [
+      { date: '2014 年', title: 'GGE 进程启动', detail: 'CCW 框架下设立致命自主武器系统政府专家组，开始非正式磋商。' },
+      { date: '2026 年 6 月', title: '美国总统备忘录', detail: '指示五角大楼修订自主武器指令，以“消除快速部署的不必要障碍”。' },
+      { date: '2026 年 9 月 4 日', title: 'GGE 最终报告通过', detail: 'CCW/GGE.1/2026/3 以协商一致通过，含“不预判法律性质”的文书要素；此前最后一轮会议上美俄联手删除人工审查条款。' },
+      { date: '2026 年 11 月 16 日', title: '审议大会开幕即陷僵局', detail: '俄罗斯反对观察员发言安排，程序争议占据首日。' },
+      { date: '2026 年 11 月 20 日', title: '大会闭幕，无谈判授权', detail: '76 国支持未能突破共识规则；大会未启动约束性文书谈判。' },
+    ],
+    sources: [
+      { title: 'UN Killer Robot Talks End With No Binding LAWS Treaty Mandate', publisher: 'explainx', url: 'https://explainx.ai/blog/un-ccw-killer-robots-russia-us-block-binding-treaty-november-2026' },
+      { title: 'Procedural impasse at CCW Review Conference', publisher: 'Digital Watch Observatory', url: 'https://dig.watch/updates/procedural-impasse-at-ccw-review-conference' },
+      { title: 'Seventh Review Conference of the High Contracting Parties to the CCW', publisher: 'United Nations Office at Geneva', url: 'https://www.ungeneva.org/en/meetings-events/events/observances-special-events/2026/11/seventh-review-conference-high' },
+      { title: 'UN Autonomous Weapons Talks: Human Oversight Erodes', publisher: 'Cloud Security Alliance Labs', url: 'https://labs.cloudsecurityalliance.org/research/csa-research-note-un-autonomous-weapons-treaty-oversight-202/' },
+    ],
+  },
+  {
     slug: 'osorio-kilmer-facial-recognition-probable-cause-magic-8-ball',
     title: '法官裁定：AI 人脸识别不能单独构成逮捕的“合理根据”——把算法当 Magic 8 Ball 的警察不享有豁免',
     subtitle: '11 月 9 日肯塔基东区联邦法院裁决：侦探仅凭人脸识别匹配申请逮捕令，内布拉斯加男子被引渡羁押两周多，案发时他正在外州上班；法官 S. Chad Meredith 写道，这种技术“或许比 Magic 8 Ball 可靠，但盲目依赖它在原则上与盲目依赖 Magic 8 Ball 没有区别”；涉事警局政策与肯塔基州法均明文规定人脸识别只是线索、不构成合理根据',
     category: 'AI 治理',
     date: '2026-11-20',
     readTime: '10 分钟',
-    featured: true,
     tags: ['人脸识别', '第四修正案', '错误逮捕', '执法 AI'],
     summary:
       '一名侦探在宣誓书里只写了“使用了调查工具”，实际依据是一次 AI 人脸识别匹配——于是内布拉斯加人 Alain Vizcay Osorio 在佛罗里达被捕、引渡、关了两周多，案发时他正在内布拉斯加的办公室上班。联邦法官这次没有给有限豁免，理由直白到近乎失礼：盲目相信人脸识别和盲目相信 Magic 8 Ball，原则上没有区别。这是美国法院第一次如此明确地把“算法匹配 ≠ 合理根据”写进驳回豁免的理由，而 Florence 警局自己的政策、肯塔基州模范政策早就这么写了。',
@@ -7109,6 +7268,6 @@ export const siteInfo = {
   englishName: 'Science Ethics Digest',
   description:
     '聚焦科学与 AI 交叉地带的伦理事件：智能体安全、人兽嵌合研究、研究诚信与前沿治理。每一期对事件给出具体描述与独立分析，并附完整来源。',
-  updatedAt: '2026-11-21',
-  issueLabel: '第 42 期 · 2026-11-21',
+  updatedAt: '2026-11-22',
+  issueLabel: '第 43 期 · 2026-11-22',
 };
